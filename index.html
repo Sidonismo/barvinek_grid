@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="nazev">
+                <a href="#">
+                    <div class="skolka">37.mateřská škola <img src="/images/trojuhelnik.png" class="levy-roh" /><span
+                            class="plzen">Plzeň</span></div>
+                </a>
+        </aside>
+        <nav class="nav">
+                <div class="navigace">
+                    <input type="checkbox" class="toggle-menu" />
+                    <div class="hamburger"></div>
+                    <div class="kolecko"></div>
+                    <ul class="menu">
+                        <li><a href="#">Úvod</a></li>
+                        <li><a href="#">Novinky</a></li>
+                        <li><a href="#">Školka</a></li>
+                        <li><a href="#">Naše třídy</a></li>
+                        <li><a href="#">Jídelna</a></li>
+                        <li><a href="#">Foto</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+        </nav>
+        <header class="header">
+            <aside class="logo">
+                <img class="banner" src="/images/logo.png" />
+            </aside>
+            <img src="/images/header.jpg" class="banner" />
+        </header>
+        <aside class="lista">
+                <div>PRO VÝBĚR TŘÍDY &bdquo;KLIKNĚTE&ldquo; DOLE NA POSTAVIČKU</div>
+        </aside>
+        <main class="main">
+            <article class="article">
+                Málo používaný způsob uvozování představují francouzské uvozovky. »Ohraničují citaci.« Do HTML se vkládají entitami &raquo; a &laquo;. Zřídka se mohou nahrazovat dvojicí menšítek a většítek >> <<, je to ale nepraktické a nehezké.
+
+V českých textech působí francouzské uvozovky netradičně, ale kolem důležitého citátu jsou velmi vhodné. Mimochodem když si pořádně prohlédnete tvar francouzských uvozovek, pochopíte, proč mají kulaté uvozovky tvar 99 a 66. 
+Co používat
+
+Psát kulaté uvozovky při běžné práci pomocí altu nebo entitami je pakárna dobrá tak akorát na zblbnutí. Doporučuji raději používat rovné uvozovky, už proto, že si na ně čtenáři na internetu zvykli. Kulaté uvozovky používám jedině pokud:
+
+    mám krátký text, na kterém mi enormně záleží,
+    nebo mám dlouhý text, který se nebude nikdy měnit, takže se vyplatí prohnat to nějakým programem pro zaměňování (nejčastěji prostě jenom Edit > Replace).
+
+Vnořené uvozovky
+
+Vysvětlím to takto: „V přímé řeči se může vyskytnout ‚citace‘. Pak se už nepoužívají dvojité uvozovky, ale jednoduché uvozovky.“ Jsou to prostě takové znaky ‚‘ , které bývají chybně zaměňovány za čárky a apostrofy.
+
+Do HTML se spodní jednoduchá uvozovka vkládá jako čárka nebo jako entita &#8218;. Horní jednoduchá uvozovka klávesami Alt + 0145 (ve win) nebo entitou &#8216;.
+Podmínky funkčnosti
+
+Aby ty divoké znaky zadávané číselnými entitami fungovaly, je potřeba, aby u klienta byly nainstalovány nějaké fonty. Nevím přesně jaké, ale na novějších systémech jsou vždy -- naopak třeba na Win 98 velmi často nainstalované nejsou.
+            </article>
+            <article class="article">
+                Málo používaný způsob uvozování představují francouzské uvozovky. »Ohraničují citaci.« Do HTML se vkládají entitami &raquo; a &laquo;. Zřídka se mohou nahrazovat dvojicí menšítek a většítek >> <<, je to ale nepraktické a nehezké.
+
+V českých textech působí francouzské uvozovky netradičně, ale kolem důležitého citátu jsou velmi vhodné. Mimochodem když si pořádně prohlédnete tvar francouzských uvozovek, pochopíte, proč mají kulaté uvozovky tvar 99 a 66. 
+Co používat
+
+Psát kulaté uvozovky při běžné práci pomocí altu nebo entitami je pakárna dobrá tak akorát na zblbnutí. Doporučuji raději používat rovné uvozovky, už proto, že si na ně čtenáři na internetu zvykli. Kulaté uvozovky používám jedině pokud:
+
+    mám krátký text, na kterém mi enormně záleží,
+    nebo mám dlouhý text, který se nebude nikdy měnit, takže se vyplatí prohnat to nějakým programem pro zaměňování (nejčastěji prostě jenom Edit > Replace).
+
+Vnořené uvozovky
+
+Vysvětlím to takto: „V přímé řeči se může vyskytnout ‚citace‘. Pak se už nepoužívají dvojité uvozovky, ale jednoduché uvozovky.“ Jsou to prostě takové znaky ‚‘ , které bývají chybně zaměňovány za čárky a apostrofy.
+
+Do HTML se spodní jednoduchá uvozovka vkládá jako čárka nebo jako entita &#8218;. Horní jednoduchá uvozovka klávesami Alt + 0145 (ve win) nebo entitou &#8216;.
+Podmínky funkčnosti
+
+Aby ty divoké znaky zadávané číselnými entitami fungovaly, je potřeba, aby u klienta byly nainstalovány nějaké fonty. Nevím přesně jaké, ale na novějších systémech jsou vždy -- naopak třeba na Win 98 velmi často nainstalované nejsou.
+            </article>
+        </main>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>
