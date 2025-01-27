@@ -178,7 +178,7 @@ a .skolka {
             cursor: pointer;
             z-index: 2;
             transition: 0.3s;
-            top: 2em;
+            top: 2.6em;
             right: 2em;
         }
     
@@ -248,7 +248,7 @@ a .skolka {
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            top: 0.9em;
+            top: 1.5em;
             right: 1.5em;
         }
     
@@ -266,11 +266,12 @@ a .skolka {
         }
         .toggle-menu{
             z-index: 8000;
-            top: -15px;
-            right: -15px;
+            position: fixed;
+            top: 0.5em;
+            right: 0.8em;
             width: 60px;
             height: 60px;
-            opacity: 0;
+            opacity: 1;
         }
 
         .menu li a {
@@ -330,7 +331,9 @@ a .skolka {
         top: 0;
         .navigace {
             @include flex-between();
-    
+            .kolecko{
+                display: none;
+            }
             .hamburger,
             .toggle-menu {
                 display: none;
