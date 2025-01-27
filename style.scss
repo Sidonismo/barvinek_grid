@@ -1,5 +1,13 @@
-/* Základní styly */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Základní styly */
+/* @link https://utopia.fyi/type/calculator?c=320,10,1.2,1240,18,1.25,0,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --step--3: clamp(0.3617rem, 0.2871rem + 0.3727vw, 0.576rem);
+    --step--2: clamp(0.434rem, 0.3346rem + 0.4973vw, 0.72rem);
+    --step--1: clamp(0.5208rem, 0.3889rem + 0.6594vw, 0.9rem);
+    --step-0: clamp(0.625rem, 0.4511rem + 0.8696vw, 1.125rem);
+  }
 
 $base-color: #fff;
 $secondary-color: #000;
@@ -10,6 +18,7 @@ $lista: #0d5c91;
 @mixin menu-font() {
     text-transform: uppercase;
     font-weight: 800;
+    font-size: var(--step-0);
     color: $base-color;
     text-decoration: none;
     white-space: nowrap;
@@ -35,7 +44,6 @@ $lista: #0d5c91;
 
 * {
     font-family: "Roboto";
-    font-size: small;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -74,7 +82,7 @@ body {
     grid-area: nazev;
     position: sticky;
     top: 0;
-    background-color: $nadpisy-tmave;
+    background-color: $nadpisy-background;
 
 }
 
@@ -85,10 +93,11 @@ body {
 
 a .skolka {
     display: flex;
-    width: 100%;
-    justify-content: center;
+    justify-content: start;
     flex-direction: row;
     align-items: center;
+    width: 17em;
+    background-color: $nadpisy-tmave;
 
     @include menu-font();
 }
@@ -122,10 +131,11 @@ a .skolka {
 
 .lista {
     position: sticky;
-    top: 40px;
+    top: 32px;
     grid-area: lista;
     background-color: $lista;
     padding: 20px;
+    text-align: center;
     @include menu-font();
 }
 
@@ -159,7 +169,7 @@ a .skolka {
     z-index: 3;
     .navigace {
         .hamburger {
-            position: relative;
+            position: fixed;
             z-index: 5000;
             width: 20px;
             height: 4px;
@@ -168,6 +178,8 @@ a .skolka {
             cursor: pointer;
             z-index: 2;
             transition: 0.3s;
+            top: 2em;
+            right: 2em;
         }
     
         .hamburger::before,
@@ -226,6 +238,19 @@ a .skolka {
         .toggle-menu {
             display: block;
         }
+
+        .kolecko {
+            position: fixed;
+            z-index: 0;
+            height: 40px;
+            width: 40px;
+            background-image: url("/images/kruh.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            top: 0.9em;
+            right: 1.5em;
+        }
     
         .menu {
             justify-content: start;
@@ -241,8 +266,8 @@ a .skolka {
         }
         .toggle-menu{
             z-index: 8000;
-            top: -20px;
-            right: -20px;
+            top: -15px;
+            right: -15px;
             width: 60px;
             height: 60px;
             opacity: 0;
@@ -291,10 +316,10 @@ a .skolka {
         .banner{
             position: absolute;
         z-index: 0;
-                top: 50px;
+                top: 3.1rem;
                 padding-left: 20px;
-                width: 14%;
-                height: auto;
+                width: 15%;
+                max-width: 140px;
         }
     }
     .nav {
