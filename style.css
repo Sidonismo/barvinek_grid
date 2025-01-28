@@ -1,9 +1,19 @@
 @charset "UTF-8";
-/* Základní styly */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Základní styly */
+/* @link https://utopia.fyi/type/calculator?c=320,10,1.2,1240,17,1.5,3,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+  --step--3: clamp(0.3148rem, 0.378rem + -0.0815vw, 0.3617rem);
+  --step--2: clamp(0.434rem, 0.4207rem + 0.0664vw, 0.4722rem);
+  --step--1: clamp(0.5208rem, 0.4556rem + 0.3261vw, 0.7083rem);
+  --step-0: clamp(0.625rem, 0.4728rem + 0.7609vw, 1.0625rem);
+  --step-1: clamp(0.75rem, 0.4565rem + 1.4674vw, 1.5938rem);
+  --step-2: clamp(0.9rem, 0.3815rem + 2.5924vw, 2.3906rem);
+  --step-3: clamp(1.08rem, 0.2084rem + 4.3582vw, 3.5859rem);
+}
+
 * {
   font-family: "Roboto";
-  font-size: small;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,38 +36,53 @@ body {
 
 .container {
   display: grid;
-  grid-template-areas: "nazev" "header" "lista" "main" "footer";
-  grid-template-columns: 1fr;
+  grid-template-areas: "navigace" "header" "lista" "main" "footer";
+  grid-template-columns: 100%;
   grid-template-rows: auto;
   gap: 0px;
   width: 100%;
 }
 
-.nazev {
-  grid-area: nazev;
+nav.nav {
+  grid-area: navigace;
   position: sticky;
   top: 0;
-  background-color: #709595;
+  background-color: #99cccc;
 }
 
 .menu {
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #fff;
-  text-decoration: none;
-  white-space: nowrap;
-  padding: 5px;
-  color: #fff;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  background: #709595;
+  width: 50%;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.menu li {
+  width: 100%;
+}
+
+.menu li a,
+.menu li a:hover {
+  padding: 20px;
+  box-shadow: 0 -5px 0 #99cccc inset, 300px 0 0 #709595 inset;
 }
 
 a .skolka {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  justify-content: start;
   flex-direction: row;
   align-items: center;
+  width: 17em;
+  background-color: #709595;
   text-transform: uppercase;
   font-weight: 800;
+  font-size: var(--step-0);
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
@@ -92,12 +117,14 @@ a .skolka {
 
 .lista {
   position: sticky;
-  top: 40px;
+  top: 32px;
   grid-area: lista;
   background-color: #0d5c91;
   padding: 20px;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 800;
+  font-size: var(--step-0);
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
@@ -107,7 +134,15 @@ a .skolka {
 .main {
   grid-area: main;
   background-color: #f9f9f9;
-  padding: 20px;
+  padding: 0px;
+  margin-bottom: 10em;
+}
+.main img.spodni-banner {
+  position: fixed;
+  left: 0%;
+  bottom: 3em;
+  width: 100%;
+  overflow: visible;
 }
 
 .article {
@@ -119,15 +154,12 @@ a .skolka {
 
 .footer {
   grid-area: footer;
-  position: static;
+  position: sticky;
   bottom: 0;
   background-color: #709595;
-  color: #ddd;
+  color: #fff;
   padding: 15px;
   text-align: center;
-  border-top: 1px solid #444;
-  width: 100%;
-  margin: auto;
 }
 
 .nav {
@@ -137,7 +169,7 @@ a .skolka {
   z-index: 3;
 }
 .nav .navigace .hamburger {
-  position: relative;
+  position: fixed;
   z-index: 5000;
   width: 20px;
   height: 4px;
@@ -146,6 +178,8 @@ a .skolka {
   cursor: pointer;
   z-index: 2;
   transition: 0.3s;
+  top: 2.6em;
+  right: 2em;
 }
 .nav .navigace .hamburger::before,
 .nav .navigace .hamburger::after {
@@ -195,6 +229,18 @@ a .skolka {
 .nav .navigace .toggle-menu {
   display: block;
 }
+.nav .navigace .kolecko {
+  position: fixed;
+  z-index: 0;
+  height: 40px;
+  width: 40px;
+  background-image: url("/images/kruh.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 1.5em;
+  right: 1.5em;
+}
 .nav .navigace .menu {
   justify-content: start;
   flex-direction: column;
@@ -209,8 +255,9 @@ a .skolka {
 }
 .nav .navigace .toggle-menu {
   z-index: 8000;
-  top: -20px;
-  right: -20px;
+  position: fixed;
+  top: 0.5em;
+  right: 0.8em;
   width: 60px;
   height: 60px;
   opacity: 0;
@@ -227,22 +274,11 @@ a .skolka {
 
 /* Větší obrazovka */
 @media (min-width: 768px) {
-  .nazev a {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0;
-    transition: 0.3s;
-  }
   .container {
-    grid-template-areas: "nazev nav nav" "header header header" "lista lista lista" "main main main" "footer footer footer";
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "navigace" "header" "lista" "main" "footer";
+    grid-template-columns: auto;
     grid-template-rows: auto;
     gap: 0px;
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto 0 auto;
   }
   .logo {
     display: block;
@@ -250,17 +286,55 @@ a .skolka {
   .logo .banner {
     position: absolute;
     z-index: 0;
-    top: 50px;
+    top: 3.1rem;
     padding-left: 20px;
-    width: 14%;
-    height: auto;
+    width: 15%;
+    max-width: 140px;
   }
   .nav {
     all: unset;
-    grid-area: nav;
-    background-color: #99cccc;
+    grid-area: navigace;
     position: sticky;
+    display: flex;
     top: 0;
+    background-color: rgba(13, 92, 145, 0.7);
+    left: 5%;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+  }
+  .nav .nazev a .skolka {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: center;
+    background-color: #709595;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: var(--step-0);
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 5px;
+  }
+  .nav .nazev a {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0;
+    transition: 0.3s;
+  }
+  .nav .nazev .levy-roh {
+    margin-left: 8px;
+    width: 10px;
+    height: 22px;
+  }
+  .nav .nazev .plzen {
+    padding: 3px 3px;
+    color: #709595;
+    background-color: #fff;
+    text-shadow: none;
   }
   .nav .navigace {
     position: relative;
@@ -269,6 +343,9 @@ a .skolka {
     align-items: center;
     padding: 0 0;
     transition: 0.3s;
+  }
+  .nav .navigace .kolecko {
+    display: none;
   }
   .nav .navigace .hamburger,
   .nav .navigace .toggle-menu {
@@ -284,6 +361,7 @@ a .skolka {
     transition: 0.3s;
     text-transform: uppercase;
     font-weight: 800;
+    font-size: var(--step-0);
     color: #fff;
     text-decoration: none;
     white-space: nowrap;
@@ -299,12 +377,35 @@ a .skolka {
     transition: 0.3s;
     text-transform: uppercase;
     font-weight: 800;
+    font-size: var(--step-0);
     color: #fff;
     text-decoration: none;
     white-space: nowrap;
     padding: 5px;
   }
-  .nav .navigace .menu li {
-    padding: 3px;
+  .nav .navigace .menu li a {
+    padding: 5px;
+    box-shadow: none;
+  }
+  .nav .navigace menu li a:hover {
+    box-shadow: 0 -5px 0 #99cccc inset, 300px 0 0 rgba(112, 149, 149, 0.9) inset;
+  }
+  .header {
+    grid-area: header;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+  }
+  .lista {
+    grid-area: lista;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+  }
+  main {
+    grid-area: main;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */
