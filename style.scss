@@ -1,13 +1,22 @@
+@use 'node_modules/utopia-core-scss/src/utopia' as utopia;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* Základní styly */
-/* @link https://utopia.fyi/type/calculator?c=320,10,1.2,1240,18,1.25,0,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+/* @link https://utopia.fyi/type/calculator?c=320,10,1.2,1240,17,1.5,3,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-    --step--3: clamp(0.3617rem, 0.2871rem + 0.3727vw, 0.576rem);
-    --step--2: clamp(0.434rem, 0.3346rem + 0.4973vw, 0.72rem);
-    --step--1: clamp(0.5208rem, 0.3889rem + 0.6594vw, 0.9rem);
-    --step-0: clamp(0.625rem, 0.4511rem + 0.8696vw, 1.125rem);
-  }
+    @include utopia.generateTypeScale(("minWidth": 320,
+            "maxWidth": 1240,
+            "minFontSize": 10,
+            "maxFontSize": 17,
+            "minTypeScale": 1.2,
+            "maxTypeScale": 1.5,
+            "positiveSteps": 3,
+            "negativeSteps": 3,
+            "prefix": "step-",
+            "relativeTo": "viewport-width"
+        ));
+}
 
 $base-color: #fff;
 $secondary-color: #000;
@@ -49,6 +58,7 @@ $lista: #0d5c91;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+
     a:visited {
         color: $base-color;
     }
@@ -67,19 +77,19 @@ body {
 .container {
     display: grid;
     grid-template-areas:
-        "nazev"
+        "navigace"
         "header"
         "lista"
         "main"
         "footer";
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
     gap: 0px;
     width: 100%;
 }
 
-.nazev {
-    grid-area: nazev;
+nav.nav {
+    grid-area: navigace;
     position: sticky;
     top: 0;
     background-color: $nadpisy-background;
@@ -87,8 +97,27 @@ body {
 }
 
 .menu {
-    @include menu-font();
-    color: $base-color;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -350px;
+    background: $nadpisy-tmave;
+    width: 50%;
+    height: 100%;
+    padding-top: 30px;
+}
+
+.menu li {
+    width: 100%;
+}
+
+.menu li a,
+.menu li a:hover {
+    padding: 20px;
+    box-shadow: 0 -5px 0 $nadpisy-background inset,
+        300px 0 0 $nadpisy-tmave inset;
 }
 
 a .skolka {
@@ -122,6 +151,7 @@ a .skolka {
 .header {
     grid-area: header;
     z-index: -1;
+
     .banner {
         width: 100%;
         height: auto;
@@ -144,7 +174,8 @@ a .skolka {
     background-color: #f9f9f9;
     padding: 0px;
     margin-bottom: 10em;
-    img.spodni-banner{
+
+    img.spodni-banner {
         position: fixed;
         left: 0%;
         bottom: 3em;
@@ -164,17 +195,18 @@ a .skolka {
     grid-area: footer;
     position: sticky;
     bottom: 0;
-    background-color: $base-color;
-    color: #ddd;
+    background-color: $nadpisy-tmave;
+    color: $base-color;
     padding: 15px;
     text-align: center;
 }
 
-.nav{
+.nav {
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 3;
+
     .navigace {
         .hamburger {
             position: fixed;
@@ -189,7 +221,7 @@ a .skolka {
             top: 2.6em;
             right: 2em;
         }
-    
+
         .hamburger::before,
         .hamburger::after {
             content: "";
@@ -201,17 +233,17 @@ a .skolka {
             border-radius: 10px;
             transition: 0.3s;
         }
-    
+
         .hamburger::before {
             top: 10px;
             width: 25px;
         }
-    
+
         .hamburger::after {
             top: -10px;
             width: 25px;
         }
-    
+
         .toggle-menu {
             position: absolute;
             width: 30px;
@@ -220,28 +252,28 @@ a .skolka {
             cursor: pointer;
             opacity: 0;
         }
-        
+
         input:checked~.hamburger {
             background: transparent;
         }
-    
+
         input:checked~.hamburger::before {
             top: 0;
             transform: rotate(-45deg);
             width: 30px;
         }
-    
+
         input:checked~.hamburger::after {
             top: 0;
             transform: rotate(45deg);
             width: 30px;
         }
-    
+
         input:checked~.menu {
             right: 0;
             box-shadow: -10px 40px 20px $nadpisy-tmave;
         }
-    
+
         .hamburger,
         .toggle-menu {
             display: block;
@@ -259,7 +291,7 @@ a .skolka {
             top: 1.5em;
             right: 1.5em;
         }
-    
+
         .menu {
             justify-content: start;
             flex-direction: column;
@@ -272,7 +304,8 @@ a .skolka {
             height: 100%;
             padding-top: 30px;
         }
-        .toggle-menu{
+
+        .toggle-menu {
             z-index: 8000;
             position: fixed;
             top: 0.5em;
@@ -299,70 +332,131 @@ a .skolka {
 
 /* Větší obrazovka */
 @media (min-width:768px) {
-    .nazev {
-        a {
-            @include flex-between();
-        }
-    }
 
     .container {
         grid-template-areas:
-            "nazev nav nav"
-            "header header header"
-            "lista lista lista"
-            "main main main"
-            "footer footer footer";
-        grid-template-columns: 1fr 3fr 1fr;
+            "navigace"
+            "header"
+            "lista"
+            "main"
+            "footer";
+        grid-template-columns: auto;
         grid-template-rows: auto;
         gap: 0px;
-        width: 90%;
-        max-width: 900px;
-        margin: 0 auto 0 auto;
     }
 
     .logo {
         display: block;
-        .banner{
+
+        .banner {
             position: absolute;
-        z-index: 0;
-                top: 3.1rem;
-                padding-left: 20px;
-                width: 15%;
-                max-width: 140px;
+            z-index: 0;
+            top: 3.1rem;
+            padding-left: 20px;
+            width: 15%;
+            max-width: 140px;
         }
     }
+
     .nav {
         all: unset;
-        grid-area: nav;
-        background-color: $nadpisy-background;
+        grid-area: navigace;
         position: sticky;
+        display: flex;
         top: 0;
+        background-color: rgba(13, 92, 145, 0.7);
+        left: 5%;
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto 0 auto;
+
+        .nazev {
+
+
+            a .skolka {
+                display: flex;
+                justify-content: start;
+                flex-direction: row;
+                align-items: center;
+                background-color: $nadpisy-tmave;
+
+                @include menu-font();
+            }
+
+            a {
+                @include flex-between();
+            }
+
+            .levy-roh {
+                margin-left: 8px;
+                width: 10px;
+                height: 22px;
+            }
+
+            .plzen {
+                padding: 3px 3px;
+                color: $nadpisy-tmave;
+                background-color: $base-color;
+                text-shadow: none;
+            }
+        }
+
         .navigace {
+
             @include flex-between();
-            .kolecko{
+
+            .kolecko {
                 display: none;
             }
+
             .hamburger,
             .toggle-menu {
                 display: none;
             }
-    
+
             input:checked~.menu {
                 all: unset;
                 @include flex-between();
                 @include menu-font();
             }
+
             .menu {
                 all: unset;
                 @include flex-between();
                 @include menu-font();
             }
-            .menu li{
-                padding: 3px;
+
+            .menu li a {
+                padding: 5px;
+                box-shadow: none;
             }
-        
-    
-    
+
+            menu li a:hover {
+                box-shadow: 0 -5px 0 #99cccc inset, 300px 0 0 rgba(112, 149, 149, 0.9) inset;
+            }
+
+
         }
+    }
+
+    .header {
+        grid-area: header;
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto 0 auto;
+    }
+
+    .lista {
+        grid-area: lista;
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto 0 auto;
+    }
+
+    main {
+        grid-area: main;
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto 0 auto;
     }
 }
