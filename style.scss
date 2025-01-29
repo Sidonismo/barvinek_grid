@@ -185,12 +185,14 @@ a .skolka {
         div.banner-fotografie{
             
             @include flex-between();
-            margin: auto 7em;
+            margin: 7em;
             background-color: $nadpisy-background;
             padding: 15px 25px 15px 25px ;
             color: $base-color;
+            flex-wrap: wrap;
+            gap: 10px 10px;
             div.nazev-galerie{
-                width: 10em;
+                width: min-content;
                 height: 7em;
                 background-color: $nadpisy-tmave;
                 color: $base-color;

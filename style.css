@@ -155,13 +155,16 @@ a .skolka {
   align-items: center;
   padding: 0 0;
   transition: 0.3s;
-  margin: auto 7em;
+  margin: 7em;
   background-color: #99cccc;
   padding: 15px 25px 15px 25px;
   color: #fff;
+  flex-wrap: wrap;
+  gap: 10px 10px;
 }
 .main article.banner-galerie div.banner-fotografie div.nazev-galerie {
-  width: 10em;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 7em;
   background-color: #709595;
   color: #fff;
