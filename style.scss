@@ -59,7 +59,7 @@ $lista: #0d5c91;
     text-decoration: none;
     list-style: none;
 
-    a:visited {
+    a:visited, a:link {
         color: $base-color;
     }
 }
