@@ -137,6 +137,46 @@ a .skolka {
   margin: 0 auto 0 auto;
   margin-bottom: 20vw;
 }
+.main article.banner-galerie {
+  color: rgb(40, 73, 73);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.main article.banner-galerie h1 {
+  text-align: center;
+  padding: 1em;
+  padding-bottom: 1.2em;
+}
+.main article.banner-galerie div.banner-fotografie {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0;
+  transition: 0.3s;
+  margin: 7em;
+  background-color: #99cccc;
+  padding: 15px 25px 15px 25px;
+  color: #fff;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+}
+.main article.banner-galerie div.banner-fotografie div.nazev-galerie {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 7em;
+  background-color: #709595;
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+}
+.main article.banner-galerie div.banner-fotografie div.nazev-galerie p {
+  padding: 0.4em;
+}
+.main article.banner-galerie div.banner-fotografie a {
+  padding-left: 15px;
+}
 .main img.spodni-banner {
   position: fixed;
   bottom: 5em;
@@ -146,6 +186,20 @@ a .skolka {
   justify-content: center;
   width: 100%;
   left: 0%;
+  cursor: pointer;
+}
+.main .tridy-link {
+  position: fixed;
+  bottom: 5em;
+  display: flex;
+  width: 100%;
+  height: 10em;
+  left: 0%;
+  bottom: 5em;
+}
+.main .tridy-link a {
+  width: 50%;
+  background-color: #99cccc;
 }
 
 .footer {
