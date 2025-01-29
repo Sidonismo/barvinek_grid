@@ -96,19 +96,6 @@ nav.nav {
 
 }
 
-.menu {
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: -350px;
-    background: $nadpisy-tmave;
-    width: 50%;
-    height: 100%;
-    padding-top: 0px;
-}
-
 .menu li {
     width: 100%;
     padding: 3% 0;
@@ -318,7 +305,7 @@ a .skolka {
             align-items: center;
             position: fixed;
             top: 0;
-            right: -370px;
+            right: -449px;
             background: $nadpisy-tmave;
             width: 50%;
             height: 100%;
@@ -350,7 +337,7 @@ a .skolka {
 
 
 /* Větší obrazovka */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 897px) {
 
     .container {
         grid-template-areas:
@@ -364,19 +351,6 @@ a .skolka {
         gap: 0px;
     }
 
-    .logo {
-        display: block;
-
-        .banner {
-            position: absolute;
-            z-index: 0;
-            top: 3.1rem;
-            padding-left: 20px;
-            width: 15%;
-            max-width: 140px;
-        }
-    }
-
     .nav {
         all: unset;
         grid-area: navigace;
@@ -386,7 +360,7 @@ a .skolka {
         background-color: rgba(13, 92, 145, 0.7);
         left: 5%;
         width: 90%;
-        max-width: 900px;
+        max-width: 940px;
         margin: 0 auto 0 auto;
 
         .nazev {
@@ -462,21 +436,21 @@ a .skolka {
     .header {
         grid-area: header;
         width: 90%;
-        max-width: 900px;
+        max-width: 940px;
         margin: 0 auto 0 auto;
     }
 
     .lista {
         grid-area: lista;
         width: 90%;
-        max-width: 900px;
+        max-width: 940px;
         margin: 0 auto 0 auto;
     }
 
     main {
         grid-area: main;
         width: 90%;
-        max-width: 900px;
+        max-width: 940px;
         img.spodni-banner{
             bottom: 3em !important;
         }
@@ -511,3 +485,18 @@ a .skolka {
         }
     }
 }
+
+@media only screen and (min-width: 420px) {
+    .logo {
+        display: block;
+
+        .banner {
+            position: absolute;
+            z-index: 0;
+            top: 3.1rem;
+            padding-left: 20px;
+            width: 15%;
+            max-width: 140px;
+        }
+    }
+  }
