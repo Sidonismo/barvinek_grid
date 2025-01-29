@@ -59,7 +59,7 @@ $lista: #0d5c91;
     text-decoration: none;
     list-style: none;
 
-    a:visited {
+    a:visited, a:link {
         color: $base-color;
     }
 }
@@ -169,26 +169,30 @@ a .skolka {
     @include menu-font();
 }
 
-.main {
-    grid-area: main;
-    background-color: #f9f9f9;
-    padding: 0px;
-    margin-bottom: 10em;
-
-    img.spodni-banner {
-        position: fixed;
-        left: 0%;
-        bottom: 3em;
-        width: 100%;
-        overflow: visible;
-    }
-}
-
 .article {
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    grid-area: main;
+    background-color: #f9f9f9;
+    padding: 0px;
+    margin: 0 auto 0 auto;
+    margin-bottom: 20vw;
+
+    img.spodni-banner {
+        position: fixed;
+        bottom: 5em;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        left: 0%;
+    }
 }
 
 .footer {
@@ -198,7 +202,22 @@ a .skolka {
     background-color: $nadpisy-tmave;
     color: $base-color;
     padding: 15px;
-    text-align: center;
+
+    div.footer-text {
+        @include flex-between();
+        flex-wrap: wrap;
+
+        p {
+            width: 100%;
+            max-width: 50%;
+            flex: none;
+            text-align: center;
+        }
+
+        p:nth-child(-n+3) {
+            padding-bottom: 1em;
+        }
+    }
 }
 
 .nav {
@@ -331,7 +350,7 @@ a .skolka {
 
 
 /* Větší obrazovka */
-@media (min-width:768px) {
+@media only screen and (min-width: 768px) {
 
     .container {
         grid-template-areas:
@@ -457,6 +476,37 @@ a .skolka {
         grid-area: main;
         width: 90%;
         max-width: 900px;
-        margin: 0 auto 0 auto;
+        img.spodni-banner{
+            bottom: 3em !important;
+        }
+        
+    }
+
+    .footer {
+        div.footer-text {
+            p {
+                max-width: 25%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:420px) {
+    .main {
+        grid-area: main;
+        background-color: #f9f9f9;
+        padding: 0px;
+        margin-bottom: 28vw;
+    
+        img.spodni-banner {
+            position: fixed;
+            bottom: 4em;
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-content: center;
+            width: 240%;
+            left: -70%;
+        }
     }
 }

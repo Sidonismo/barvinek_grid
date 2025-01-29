@@ -20,7 +20,7 @@
   text-decoration: none;
   list-style: none;
 }
-* a:visited {
+* a:visited, * a:link {
   color: #fff;
 }
 
@@ -131,25 +131,29 @@ a .skolka {
   padding: 5px;
 }
 
-.main {
-  grid-area: main;
-  background-color: #f9f9f9;
-  padding: 0px;
-  margin-bottom: 10em;
-}
-.main img.spodni-banner {
-  position: fixed;
-  left: 0%;
-  bottom: 3em;
-  width: 100%;
-  overflow: visible;
-}
-
 .article {
   background-color: #fff;
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+  grid-area: main;
+  background-color: #f9f9f9;
+  padding: 0px;
+  margin: 0 auto 0 auto;
+  margin-bottom: 20vw;
+}
+.main img.spodni-banner {
+  position: fixed;
+  bottom: 5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  left: 0%;
 }
 
 .footer {
@@ -159,7 +163,24 @@ a .skolka {
   background-color: #709595;
   color: #fff;
   padding: 15px;
+}
+.footer div.footer-text {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0;
+  transition: 0.3s;
+  flex-wrap: wrap;
+}
+.footer div.footer-text p {
+  width: 100%;
+  max-width: 50%;
+  flex: none;
   text-align: center;
+}
+.footer div.footer-text p:nth-child(-n+3) {
+  padding-bottom: 1em;
 }
 
 .nav {
@@ -273,7 +294,7 @@ a .skolka {
 }
 
 /* Větší obrazovka */
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .container {
     grid-template-areas: "navigace" "header" "lista" "main" "footer";
     grid-template-columns: auto;
@@ -406,6 +427,29 @@ a .skolka {
     grid-area: main;
     width: 90%;
     max-width: 900px;
-    margin: 0 auto 0 auto;
+  }
+  main img.spodni-banner {
+    bottom: 3em !important;
+  }
+  .footer div.footer-text p {
+    max-width: 25%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .main {
+    grid-area: main;
+    background-color: #f9f9f9;
+    padding: 0px;
+    margin-bottom: 28vw;
+  }
+  .main img.spodni-banner {
+    position: fixed;
+    bottom: 4em;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 240%;
+    left: -70%;
   }
 }/*# sourceMappingURL=style.css.map */
