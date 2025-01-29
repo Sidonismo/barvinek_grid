@@ -247,7 +247,7 @@ a .skolka {
   z-index: 0;
   height: 40px;
   width: 40px;
-  background-image: url("/images/kruh.png");
+  background-image: url("images/kruh.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
