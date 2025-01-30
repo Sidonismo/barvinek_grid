@@ -110,7 +110,9 @@ a .skolka {
 
 .lista {
   position: sticky;
-  top: 40px;
+  top: 2em;
+  height: 2.5em;
+  align-content: center;
   grid-area: lista;
   background-color: #0d5c91;
   padding: 20px;
