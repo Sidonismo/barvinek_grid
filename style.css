@@ -20,7 +20,8 @@
   text-decoration: none;
   list-style: none;
 }
-* a:visited, * a:link {
+* a:visited,
+* a:link {
   color: #fff;
 }
 
@@ -74,7 +75,7 @@ a .skolka {
   background-color: #709595;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: var(--step-0);
+  font-size: var(--step-1);
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
@@ -109,14 +110,14 @@ a .skolka {
 
 .lista {
   position: sticky;
-  top: 32px;
+  top: 40px;
   grid-area: lista;
   background-color: #0d5c91;
   padding: 20px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: var(--step-0);
+  font-size: var(--step-1);
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
@@ -149,33 +150,36 @@ a .skolka {
   padding-bottom: 1.2em;
 }
 .main article.banner-galerie div.banner-fotografie {
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0;
-  transition: 0.3s;
-  margin: 7em;
+  flex-direction: column;
+  margin: 1em 4em;
   background-color: #99cccc;
-  padding: 15px 25px 15px 25px;
+  padding: 1rem;
   color: #fff;
-  flex-wrap: wrap;
-  gap: 10px 10px;
+  flex-wrap: nowrap;
+  gap: 1rem;
 }
 .main article.banner-galerie div.banner-fotografie div.nazev-galerie {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 7em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  -o-object-position: center center;
+     object-position: center center;
   background-color: #709595;
   color: #fff;
   text-align: center;
   font-weight: bolder;
+  object-fit: cover;
 }
 .main article.banner-galerie div.banner-fotografie div.nazev-galerie p {
   padding: 0.4em;
 }
-.main article.banner-galerie div.banner-fotografie a {
-  padding-left: 15px;
+.main article.banner-galerie div.banner-fotografie a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  -o-object-position: center center;
+     object-position: center center;
 }
 .main img.spodni-banner {
   position: fixed;
@@ -455,6 +459,14 @@ a .skolka {
   }
   .lista {
     grid-area: lista;
+    top: 36px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: var(--step-0);
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 5px;
     width: 90%;
     max-width: 940px;
     margin: 0 auto 0 auto;
@@ -463,6 +475,29 @@ a .skolka {
     grid-area: main;
     width: 90%;
     max-width: 940px;
+  }
+  main article.banner-galerie {
+    color: rgb(40, 73, 73);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  main article.banner-galerie h1 {
+    text-align: center;
+    padding: 1em;
+    padding-bottom: 1.2em;
+  }
+  main article.banner-galerie div.banner-fotografie {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0;
+    transition: 0.3s;
+    flex-direction: row !important;
+  }
+  main article.banner-galerie div.banner-fotografie div.nazev-galerie p {
+    padding: 0.4em;
   }
   main img.spodni-banner {
     bottom: 3em !important;
