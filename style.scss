@@ -23,7 +23,7 @@ $secondary-color: #000;
 $nadpisy-background: #99cccc;
 $nadpisy-tmave: #709595;
 $lista: #0d5c91;
-$nadpisy-nejtmavsi: rgb(40, 73, 73);
+$nadpisy-nejtmavsi: #426161;
 
 @mixin menu-font() {
     text-transform: uppercase;
@@ -170,12 +170,24 @@ a .skolka {
     text-align: center;
     @include menu-font();
 }
+article,
+article[class*="article"] {
+    color: $nadpisy-nejtmavsi;
 
-.article {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    >h1 {
+        font-size: var(--step-1);
+        text-align: center;
+        padding: 1em;
+        padding-bottom: 1.2em;
+    }
+    >p,
+    .article {
+        background-color: #fff;
+      margin: 1em 5vw;
+      padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .main {
