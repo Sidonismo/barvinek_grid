@@ -268,7 +268,7 @@ article[class*=article] .article {
   justify-content: center;
   align-items: center;
   gap: 0.5em;
-  background-image: url("/images/aktuality.png");
+  background-image: url("images/aktuality.png");
   background-position: center;
   background-repeat: no-repeat;
   /* Do not repeat the image */
