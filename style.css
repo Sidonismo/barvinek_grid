@@ -1,15 +1,15 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 /* Základní styly */
 /* @link https://utopia.fyi/type/calculator?c=320,10,1.2,1240,17,1.5,3,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
-  --step--3: clamp(0.3148rem, 0.378rem + -0.0815vw, 0.3617rem);
-  --step--2: clamp(0.434rem, 0.4207rem + 0.0664vw, 0.4722rem);
-  --step--1: clamp(0.5208rem, 0.4556rem + 0.3261vw, 0.7083rem);
-  --step-0: clamp(0.625rem, 0.4728rem + 0.7609vw, 1.0625rem);
-  --step-1: clamp(0.75rem, 0.4565rem + 1.4674vw, 1.5938rem);
-  --step-2: clamp(0.9rem, 0.3815rem + 2.5924vw, 2.3906rem);
-  --step-3: clamp(1.08rem, 0.2084rem + 4.3582vw, 3.5859rem);
+  --step--3: clamp(0.2963rem, 0.9078rem + -0.789vw, 0.75rem);
+  --step--2: clamp(0.4444rem, 0.8563rem + -0.5314vw, 0.75rem);
+  --step--1: clamp(0.6667rem, 0.779rem + -0.1449vw, 0.75rem);
+  --step-0: clamp(0.75rem, 0.663rem + 0.4348vw, 1rem);
+  --step-1: clamp(0.75rem, 0.4891rem + 1.3043vw, 1.5rem);
+  --step-2: clamp(0.75rem, 0.2283rem + 2.6087vw, 2.25rem);
+  --step-3: clamp(0.75rem, -0.163rem + 4.5652vw, 3.375rem);
 }
 
 * {
@@ -51,6 +51,10 @@ nav.nav {
   background-color: #99cccc;
 }
 
+.menu {
+  overflow: scroll;
+}
+
 .menu li {
   width: 100%;
   padding: 3% 0;
@@ -73,6 +77,7 @@ a .skolka {
   align-items: center;
   width: 17em;
   background-color: #709595;
+  font-family: "Roboto", serif;
   text-transform: uppercase;
   font-weight: 800;
   font-size: var(--step-1);
@@ -117,6 +122,7 @@ a .skolka {
   background-color: #0d5c91;
   padding: 20px;
   text-align: center;
+  font-family: "Roboto", serif;
   text-transform: uppercase;
   font-weight: 800;
   font-size: var(--step-1);
@@ -130,22 +136,65 @@ article,
 article[class*=article] {
   color: #426161;
 }
+article .text-justify,
+article[class*=article] .text-justify {
+  text-align: justify;
+}
+article .text-center,
+article[class*=article] .text-center {
+  text-align: center;
+}
+article .text-left,
+article[class*=article] .text-left {
+  text-align: left;
+}
+article .text-right,
+article[class*=article] .text-right {
+  text-align: right;
+}
+article .font-bold,
+article[class*=article] .font-bold {
+  font-weight: bold;
+}
+article img,
+article[class*=article] img {
+  width: 40%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+article img.img-left,
+article[class*=article] img.img-left {
+  margin: 0.5em 1em;
+  width: 40%;
+  float: left;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+article img.img-right,
+article[class*=article] img.img-right {
+  margin: 0.5em 1em;
+  width: 40%;
+  float: right;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 article > h1,
 article[class*=article] > h1 {
-  font-size: var(--step-1);
+  font-size: var(--step-2);
   text-align: center;
-  padding: 1em;
-  padding-bottom: 1.2em;
+  padding: 2.8em;
+  padding-bottom: 0.4em;
 }
 article > p,
 article .article,
 article[class*=article] > p,
 article[class*=article] .article {
+  display: inline-block;
   background-color: #fff;
   margin: 1em 5vw;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 6px -4px #99cccc;
 }
 
 .main {
@@ -198,6 +247,56 @@ article[class*=article] .article {
   -o-object-position: center center;
      object-position: center center;
 }
+.main #aktuality {
+  text-transform: uppercase;
+  font-family: "Dongle", serif;
+  font-size: var(--step-0);
+  font-weight: bold;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3vw;
+}
+.main #aktuality div[id^=box-] {
+  flex: 47% 0 1;
+  display: flex;
+  height: 18vw;
+  max-height: 18vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  background-image: url("/images/aktuality.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: contain;
+  text-align: center;
+}
+.main #aktuality p.datum {
+  font-size: var(--step-2);
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+.main #aktuality p.udalost {
+  font-size: var(--step--0);
+  color: #000;
+}
+.main p#odkaz-aktuality {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.main p#odkaz-aktuality a {
+  color: #426161;
+}
+.main p#odkaz-aktuality a:hover {
+  color: #000;
+  box-shadow: 2px 3px 20px #99cccc;
+}
 .main img.spodni-banner {
   position: fixed;
   bottom: 5em;
@@ -232,12 +331,11 @@ article[class*=article] .article {
   padding: 15px;
 }
 .footer div.footer-text {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 0;
-  transition: 0.3s;
+  transition: 0.4s;
   flex-wrap: wrap;
 }
 .footer div.footer-text p {
@@ -385,6 +483,7 @@ article[class*=article] .article {
     flex-direction: row;
     align-items: center;
     background-color: #709595;
+    font-family: "Roboto", serif;
     text-transform: uppercase;
     font-weight: 800;
     font-size: var(--step-0);
@@ -394,12 +493,11 @@ article[class*=article] .article {
     padding: 5px;
   }
   .nav .nazev a {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0;
-    transition: 0.3s;
+    transition: 0.4s;
   }
   .nav .nazev .levy-roh {
     margin-left: 8px;
@@ -413,12 +511,11 @@ article[class*=article] .article {
     text-shadow: none;
   }
   .nav .navigace {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0;
-    transition: 0.3s;
+    transition: 0.4s;
   }
   .nav .navigace .kolecko {
     display: none;
@@ -429,12 +526,12 @@ article[class*=article] .article {
   }
   .nav .navigace input:checked ~ .menu {
     all: unset;
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0;
-    transition: 0.3s;
+    transition: 0.4s;
+    font-family: "Roboto", serif;
     text-transform: uppercase;
     font-weight: 800;
     font-size: var(--step-0);
@@ -445,12 +542,12 @@ article[class*=article] .article {
   }
   .nav .navigace .menu {
     all: unset;
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0;
-    transition: 0.3s;
+    transition: 0.4s;
+    font-family: "Roboto", serif;
     text-transform: uppercase;
     font-weight: 800;
     font-size: var(--step-0);
@@ -477,6 +574,7 @@ article[class*=article] .article {
   .lista {
     grid-area: lista;
     top: 36px;
+    font-family: "Roboto", serif;
     text-transform: uppercase;
     font-weight: 800;
     font-size: var(--step-0);
@@ -493,6 +591,25 @@ article[class*=article] .article {
     width: 90%;
     max-width: 940px;
   }
+  main article img.img-right img, main article[class*=article] img {
+    width: 33%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main article img.img-right img.img-left, main article[class*=article] img.img-left {
+    margin: 0.5em 1em;
+    width: 33%;
+    float: left;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main article img.img-right img.img-right, main article[class*=article] img.img-right {
+    margin: 0.5em 1em;
+    width: 33%;
+    float: right;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
   main article.banner-galerie {
     color: #426161;
     display: flex;
@@ -505,12 +622,11 @@ article[class*=article] .article {
     padding-bottom: 1.2em;
   }
   main article.banner-galerie div.banner-fotografie {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0;
-    transition: 0.3s;
+    transition: 0.4s;
     flex-direction: row !important;
   }
   main article.banner-galerie div.banner-fotografie div.nazev-galerie p {
@@ -539,6 +655,24 @@ article[class*=article] .article {
     justify-content: center;
     width: 240%;
     left: -70%;
+  }
+  .main main article img.img-right img, .main article[class*=article] img {
+    width: 100%;
+    margin: 1em 0;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .main main article img.img-right img.img-left, .main article[class*=article] img.img-left {
+    margin: 1em 0;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .main main article img.img-right img.img-right, .main article[class*=article] img.img-right {
+    margin: 1em 0;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media only screen and (min-width: 420px) {
