@@ -7,11 +7,12 @@
     <title>37. mateřská školka Plzeň, Barvínek</title>
     <link rel="stylesheet" href="style.css">
     <script async>
-        function preloadImage(url) {
-            var img = new Image();
-            img.src = url;
-        }
-        preloadImage("images/foto skolky.png");
+        var image = document.images[0];
+var downloadingImage = new Image();
+downloadingImage.onload = function(){
+    image.src = this.src;   
+};
+downloadingImage.src = "images/foto skolky.png";
     </script>
     <!--script mění cestu k spodnímu obrázku dle ročních období např: "images/barvinek-spodni_baner-jaro.png"-->
     <script src="obdobi.js" defer></script>
