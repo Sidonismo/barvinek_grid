@@ -168,7 +168,7 @@ nav.nav {
   text-shadow: 1px 1px 8px #000;
 }
 .nav .navigace .menu li a.active, .nav .navigace .menu li a:hover {
-  text-shadow: 5px 5px 20px #000;
+  text-shadow: 1px 1px 3px #000;
   border-bottom: 1px solid #99cccc;
 }
 .nav .navigace .menu li a:before {
@@ -250,7 +250,7 @@ a .skolka {
 
 .lista {
   position: sticky;
-  top: 2em;
+  top: 1.7em;
   height: 2.5em;
   align-content: center;
   grid-area: lista;
@@ -587,14 +587,9 @@ article[class*=article] .article {
   .nav .navigace .menu li a {
     padding: 2em 0.8em;
   }
-  .nav .navigace .menu li a:before {
-    display: inline;
-  }
-  .nav .navigace .menu li a:after {
-    display: inline;
-  }
   .nav .navigace .menu li a.active, .nav .navigace .menu li a:hover {
-    text-shadow: 1px 1px 3px #000;
+    border-radius: 25px;
+    border-bottom: 0;
     box-shadow: 0 -5px 0 #99cccc inset, 300px 0 0 rgba(112, 149, 149, 0.9) inset;
     transition: 1s;
   }
