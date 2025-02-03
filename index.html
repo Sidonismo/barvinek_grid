@@ -6,14 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>37. mateřská školka Plzeň, Barvínek</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        var image = document.images[0];
-var downloadingImage = new Image();
-downloadingImage.onload = function(){
-    image.src = this.src;   
-};
-downloadingImage.src = "images/foto skolky.png";
-    </script>
     <!--script mění cestu k spodnímu obrázku dle ročních období např: "images/barvinek-spodni_baner-jaro.png"-->
     <script src="obdobi.js" defer></script>
     <link href="default.css" rel="stylesheet">
@@ -42,12 +34,12 @@ downloadingImage.src = "images/foto skolky.png";
                 <!-- Zde může být smyčka pro generování menu položek -->
                 <ul class="menu">
                     <!-- U active zůstane označená aktuální stránka -->
-                    <li><a href="#" class="active">Úvod</a></li>
-                    <li><a href="#">Novinky</a></li>
+                    <li><a href="index.html" class="active">Úvod</a></li>
+                    <li><a href="aktuality.html">Novinky</a></li>
                     <li><a href="#">Školka</a></li>
                     <li><a href="#">Naše třídy</a></li>
                     <li><a href="#">Jídelna</a></li>
-                    <li><a href="#">Foto</a></li>
+                    <li><a href="galerie.html">Foto</a></li>
                     <li><a href="#">Kontakt</a></li>
                 </ul>
             </div>
@@ -67,6 +59,7 @@ downloadingImage.src = "images/foto skolky.png";
 
         <!-- Zde začína obsah stránky, který se na každé stránce mění -->
         <main class="main">
+            <h1>Vítáme Vás!</h1>
             <article class="article">
                 <!-- Toto je místo pro proměnné obsahující textový obsah stránek
                 {foreach $categoryItems as $item}
@@ -261,7 +254,7 @@ downloadingImage.src = "images/foto skolky.png";
                                 <p class="datum">25.10.2023</p>
                                 <p class="udalost">Hledáme paní učitelku</p>
                             </div>
-                            <p id="odkaz-aktuality"><a href="http://">Archiv aktualit zde</a></p>
+                            <a href="aktuality.html"><p id="odkaz-article">Archiv aktualit zde</p></a>
                         </div>
                     </article>
                     <article class="banner-galerie">

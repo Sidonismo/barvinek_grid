@@ -1,0 +1,87 @@
+@import "style"; 
+ section.cards {
+    background-color: #fff;
+    margin: 1em 5vw;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 8px 6px -4px $nadpisy-background;
+    .card {
+        background: white;
+        margin-bottom: 2em;
+
+        &:hover {
+            box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+
+            picture img {
+                display: block;
+                border: 0;
+                width: 100%;
+                height: auto;
+            }
+
+            div.card-content {
+                padding: 1.4em;
+
+                h2 {
+                    @include menu-font-dongle();
+                    font-size: var(--step-2);
+                    color: #007489;
+                    margin-top: 0;
+                    margin-bottom: .5em;
+                    font-weight: bold;
+                }
+
+                div.datum {
+                    font-size: var(--step-0);
+                    position: relative;
+                    top: 0.1em;
+                    float: right;
+                    background-color: $lista;
+                    color: $base-color;
+                    padding: 5px;
+                    margin-bottom: 10px;
+                    max-width: fit-content;
+                    border-radius: 10px;
+                    z-index: 0;
+                }
+
+                p {
+                    font-size: var(--step-0);
+                    margin-bottom: 1.5em;
+                    color: $nadpisy-nejtmavsi;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 40em) {
+    /* Flexbox stuff */
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 1 24%;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 60em) {
+
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}

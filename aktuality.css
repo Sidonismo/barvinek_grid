@@ -49,7 +49,6 @@ nav.nav {
   position: sticky;
   top: 0;
   background-color: #99cccc;
-  z-index: 1;
 }
 
 .nav {
@@ -258,7 +257,6 @@ a .skolka {
   background-color: #0d5c91;
   padding: 20px;
   text-align: center;
-  z-index: 1;
   font-family: "Roboto", serif;
   text-transform: uppercase;
   font-weight: 800;
@@ -531,7 +529,6 @@ article[class*=article] a p#odkaz-article:hover {
     gap: 0px;
   }
   .nav {
-    z-index: 1;
     all: unset;
     grid-area: navigace;
     position: sticky;
@@ -542,7 +539,6 @@ article[class*=article] a p#odkaz-article:hover {
     width: 90%;
     max-width: 940px;
     margin: 0 auto 0 auto;
-    z-index: 1;
   }
   .nav .nazev a .skolka {
     display: flex;
@@ -675,7 +671,6 @@ article[class*=article] a p#odkaz-article:hover {
     width: 90%;
     max-width: 940px;
     margin: 0 auto 0 auto;
-    z-index: 1;
   }
   main {
     grid-area: main;
@@ -784,4 +779,81 @@ article[class*=article] a p#odkaz-article:hover {
     width: 15%;
     max-width: 140px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+section.cards {
+  background-color: #fff;
+  margin: 1em 5vw;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 8px 6px -4px #99cccc;
+}
+section.cards .card {
+  background: white;
+  margin-bottom: 2em;
+}
+section.cards .card:hover {
+  box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+section.cards .card a {
+  color: black;
+  text-decoration: none;
+}
+section.cards .card a picture img {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
+}
+section.cards .card a div.card-content {
+  padding: 1.4em;
+}
+section.cards .card a div.card-content h2 {
+  font-family: "Dongle", serif;
+  font-size: var(--step-0);
+  font-weight: bold;
+  font-style: normal;
+  font-size: var(--step-2);
+  color: #007489;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+section.cards .card a div.card-content div.datum {
+  font-size: var(--step-0);
+  position: relative;
+  top: 0.1em;
+  float: right;
+  background-color: #0d5c91;
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 10px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-radius: 10px;
+  z-index: 0;
+}
+section.cards .card a div.card-content p {
+  font-size: var(--step-0);
+  margin-bottom: 1.5em;
+  color: #426161;
+}
+
+@media screen and (min-width: 40em) {
+  /* Flexbox stuff */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card {
+    flex: 0 1 24%;
+  }
+  .card {
+    flex: 0 1 calc(50% - 1em);
+  }
+}
+@media screen and (min-width: 60em) {
+  .card {
+    flex: 0 1 calc(25% - 1em);
+  }
+}/*# sourceMappingURL=aktuality.css.map */
