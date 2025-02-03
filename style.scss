@@ -460,7 +460,8 @@ article[class*="article"] {
       }
       section#fotky div img { 
         width: 100%; 
-        height: auto; 
+        height: auto;
+        cursor: pointer; 
       }
 
     article {

@@ -104,6 +104,19 @@ Vložený spodní obrázek barvinek-spodni_baner-zima
         </footer>
     </div>
 </body>
+<script>
+    const foto = document.querySelectorAll("section#fotky div");
+    console.log(foto);
+    function flexSelection(){
+        if (this.style.flex === "1 1 100%")
+        this.style.flex = "none";
+        else
+        this.style.flex = "1 1 100%";
+    }
+    for (i = 0, len = foto.length; i < len; i++){
+    foto[i].onclick = flexSelection;
+}
+</script>
 <script src="js/image-click.js"></script>
 
 </html>

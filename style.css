@@ -387,6 +387,7 @@ article[class*=article] a p#odkaz-article:hover {
 .main section#fotky div img {
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 .main article section.cards {
   background-color: #fff;
