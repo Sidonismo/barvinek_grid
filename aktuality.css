@@ -52,9 +52,6 @@ nav.nav {
   z-index: 1;
 }
 
-.nav {
-  z-index: 3;
-}
 .nav .navigace .hamburger {
   position: fixed;
   z-index: 5000;
@@ -258,7 +255,7 @@ a .skolka {
   background-color: #0d5c91;
   padding: 20px;
   text-align: center;
-  z-index: 1;
+  z-index: 0;
   font-family: "Roboto", serif;
   text-transform: uppercase;
   font-weight: 800;
@@ -531,7 +528,6 @@ article[class*=article] a p#odkaz-article:hover {
     gap: 0px;
   }
   .nav {
-    z-index: 1;
     all: unset;
     grid-area: navigace;
     position: sticky;
@@ -542,7 +538,7 @@ article[class*=article] a p#odkaz-article:hover {
     width: 90%;
     max-width: 940px;
     margin: 0 auto 0 auto;
-    z-index: 1;
+    z-index: 0;
   }
   .nav .nazev a .skolka {
     display: flex;
@@ -675,7 +671,7 @@ article[class*=article] a p#odkaz-article:hover {
     width: 90%;
     max-width: 940px;
     margin: 0 auto 0 auto;
-    z-index: 1;
+    z-index: 0;
   }
   main {
     grid-area: main;

@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <!--script mění cestu k spodnímu obrázku dle ročních období např: "images/barvinek-spodni_baner-jaro.png"-->
     <script src="obdobi.js" defer></script>
-    <link href="default.css" rel="stylesheet">
-    <link href="mobile.css" media="screen and (max-width: 767.98px)" rel="stylesheet">
-    <link href="tablet.css" media="screen and (min-width: 768px) and (max-width: 1083.98px)" rel="stylesheet">
-    <link href="desktop.css" media="screen and (min-width: 1084px)" rel="stylesheet">
-<link rel="stylesheet" href="aktuality.css">
 </head>
 
 <body>
@@ -21,7 +16,7 @@
         <nav class="nav">
             <!-- Zde je název školky -->
             <aside class="nazev">
-                <a href="#">
+                <a href="fotky.html">
                     <div class="skolka">37.mateřská škola <img src="images/trojuhelnik.png" class="levy-roh" /><span
                             class="plzen">Plzeň</span></div>
                 </a>
@@ -37,11 +32,11 @@
                     <!-- U active zůstane označená aktuální stránka -->
                     <li><a href="index.html">Úvod</a></li>
                     <li><a href="aktuality.html">Novinky</a></li>
-                    <li><a href="#">Školka</a></li>
-                    <li><a href="#">Naše třídy</a></li>
-                    <li><a href="#">Jídelna</a></li>
+                    <li><a href="fotky.html">Školka</a></li>
+                    <li><a href="fotky.html">Naše třídy</a></li>
+                    <li><a href="fotky.html">Jídelna</a></li>
                     <li><a href="galerie.html" class="active">Foto</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="fotky.html">Kontakt</a></li>
                 </ul>
             </div>
         </nav>
@@ -69,87 +64,95 @@
                 {/foreach} 
                 -->
 
-<section class="cards">
-    <article class="card">
-        <a href="#">
-            <picture class="thumbnail">
-                <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-01.jpg"
-                    alt="A banana that looks like a bird">
-            </picture>
-            <div class="card-content">
-                <div class="datum">6.1.2025</div>
-                <h2>Poděkování za sbírku</h2>
-            </div><!-- .card-content -->
-        </a>
-    </article><!-- .card -->
+                <section class="cards">
+                    <article class="card">
+                        <a href="fotky.html">
+                            <picture class="thumbnail">
+                                <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-01.jpg"
+                                    alt="A banana that looks like a bird">
+                            </picture>
+                            <div class="card-content">
+                                <div class="datum">6.1.2025</div>
+                                <h2>Poděkování za sbírku</h2>
+                            </div><!-- .card-content -->
+                        </a>
+                    </article><!-- .card -->
 
-    <article class="card">
-        <a href="#">
-            <picture class="thumbnail">
-                <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-02.jpg"
-                    alt="Norwegian boller">
-            </picture>
-            <div class="card-content">
-                <div class="datum">6.1.2025</div>
-                <h2>Poděkování za sbírku</h2>
-                <p>Vážení rodiče,velice děkujeme všem, kdo se podíleli na sbírce pro opuštěné pejsky v útulku U Františka v Borovně.Čtyřnohým kamarádům se odvezlo plné auto granulí, pamlsků a dalších potřebných věcí.Na nástěnce ve vestibulu si… </p>
-                <p>Vážení rodiče,velice děkujeme všem, kdo se podíleli na sbírce pro opuštěné pejsky v útulku U Františka v Borovně.Čtyřnohým kamarádům se odvezlo plné auto granulí, pamlsků a dalších potřebných věcí.Na nástěnce ve vestibulu si… </p>
-            </div><!-- .card-content -->
-        </a>
-    </article><!-- .card -->
+                    <article class="card">
+                        <a href="fotky.html">
+                            <picture class="thumbnail">
+                                <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-02.jpg"
+                                    alt="Norwegian boller">
+                            </picture>
+                            <div class="card-content">
+                                <div class="datum">6.1.2025</div>
+                                <h2>Poděkování za sbírku</h2>
+                                <p>Vážení rodiče,velice děkujeme všem, kdo se podíleli na sbírce pro opuštěné pejsky v
+                                    útulku U Františka v Borovně.Čtyřnohým kamarádům se odvezlo plné auto granulí,
+                                    pamlsků a dalších potřebných věcí.Na nástěnce ve vestibulu si… </p>
+                                <p>Vážení rodiče,velice děkujeme všem, kdo se podíleli na sbírce pro opuštěné pejsky v
+                                    útulku U Františka v Borovně.Čtyřnohým kamarádům se odvezlo plné auto granulí,
+                                    pamlsků a dalších potřebných věcí.Na nástěnce ve vestibulu si… </p>
+                            </div><!-- .card-content -->
+                        </a>
+                    </article><!-- .card -->
 
-    <article class="card">
-        <a href="#">
-            <picture class="thumbnail">
-                <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-03.jpg"
-                    alt="A dinosaur wearing an aluminium jacket">
-            </picture>
-            <div class="card-content">
-                <div class="datum">6.1.2025</div>
-                <h2>Poděkování za sbírku</h2>
-                <p>Vážení rodiče,velice děkujeme všem, kdo se podíleli na sbírce pro opuštěné pejsky v útulku U Františka v Borovně.Čtyřnohým kamarádům se odvezlo plné auto granulí, pamlsků a dalších potřebných věcí.Na nástěnce ve vestibulu si… </p>
-            </div><!-- .card-content -->
-        </a>
-    </article><!-- .card -->
+                    <article class="card">
+                        <a href="fotky.html">
+                            <picture class="thumbnail">
+                                <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-03.jpg"
+                                    alt="A dinosaur wearing an aluminium jacket">
+                            </picture>
+                            <div class="card-content">
+                                <div class="datum">6.1.2025</div>
+                                <h2>Poděkování za sbírku</h2>
+                                <p>Vážení rodiče,velice děkujeme všem, kdo se podíleli na sbírce pro opuštěné pejsky v
+                                    útulku U Františka v Borovně.Čtyřnohým kamarádům se odvezlo plné auto granulí,
+                                    pamlsků a dalších potřebných věcí.Na nástěnce ve vestibulu si… </p>
+                            </div><!-- .card-content -->
+                        </a>
+                    </article><!-- .card -->
 
-    <article class="card">
-        <a href="#">
-            <picture class="thumbnail">
-                <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-04.jpg"
-                    alt="Chocolate filled boller">
-            </picture>
-            <div class="card-content">
-                <div class="datum">6.1.2025</div>
-                <h2>Poděkování za sbírku</h2>
-                <p>Vážení rodiče,velice děkujeme všem, kdo se podíleli na sbírce pro opuštěné pejsky v útulku U Františka v Borovně.Čtyřnohým kamarádům se odvezlo plné auto granulí, pamlsků a dalších potřebných věcí.Na nástěnce ve vestibulu si… </p>
-            </div><!-- .card-content -->
-        </a>
-    </article>
-</section>
+                    <article class="card">
+                        <a href="fotky.html">
+                            <picture class="thumbnail">
+                                <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-04.jpg"
+                                    alt="Chocolate filled boller">
+                            </picture>
+                            <div class="card-content">
+                                <div class="datum">6.1.2025</div>
+                                <h2>Poděkování za sbírku</h2>
+                                <p>Vážení rodiče,velice děkujeme všem, kdo se podíleli na sbírce pro opuštěné pejsky v
+                                    útulku U Františka v Borovně.Čtyřnohým kamarádům se odvezlo plné auto granulí,
+                                    pamlsků a dalších potřebných věcí.Na nástěnce ve vestibulu si… </p>
+                            </div><!-- .card-content -->
+                        </a>
+                    </article>
+                </section>
 
-</article>
-<!--zde končí měnící se obsah stránky a začíná neměnný obsah-->
+            </article>
+            <!--zde končí měnící se obsah stránky a začíná neměnný obsah-->
 
-<!--zde je vložený odkaz na jquery, kterým zatím řeším kliknutí na část obrázku, 
+            <!--zde je vložený odkaz na jquery, kterým zatím řeším kliknutí na část obrázku, 
 který přesměruje uživatele na dannou třídu školky.
 
 Vložený spodní obrázek barvinek-spodni_baner-zima
 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<img src="" alt="spodni-banner" class="spodni-banner imgclick">
-<script src="js/image-click.js"></script>
-</main>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <img src="" alt="spodni-banner" class="spodni-banner imgclick">
+            <script src="js/image-click.js"></script>
+        </main>
 
-<!--zde začíná spodní lišta stránky-->
-<footer class="footer">
-<div class="footer-text">
-<p>Footer</p>
-<p>Footer</p>
-<p>Footer</p>
-<p>Footer</p>
-</div>
-</footer>
-</div>
+        <!--zde začíná spodní lišta stránky-->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Footer</p>
+                <p>Footer</p>
+                <p>Footer</p>
+                <p>Footer</p>
+            </div>
+        </footer>
+    </div>
 </body>
 <script src="js/image-click.js"></script>
 

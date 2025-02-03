@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37. mateřská školka Plzeň, Barvínek</title>
+    <link rel="stylesheet" href="style.css">
+    <!--script mění cestu k spodnímu obrázku dle ročních období např: "images/barvinek-spodni_baner-jaro.png"-->
+    <script src="obdobi.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Zde začíná horní menů včetně názvu -->
+        <nav class="nav">
+            <!-- Zde je název školky -->
+            <aside class="nazev">
+                <a href="#">
+                    <div class="skolka">37.mateřská škola <img src="images/trojuhelnik.png" class="levy-roh" /><span
+                            class="plzen">Plzeň</span></div>
+                </a>
+            </aside>
+            <!-- Zde je celé navigační menů -->
+            <div class="navigace">
+                <!-- Zde je burger menu -->
+                <input type="checkbox" class="toggle-menu" />
+                <div class="hamburger"></div>
+                <div class="kolecko"></div>
+                <!-- Zde může být smyčka pro generování menu položek -->
+                <ul class="menu">
+                    <!-- U active zůstane označená aktuální stránka -->
+                    <li><a href="index.html">Úvod</a></li>
+                    <li><a href="aktuality.html">Novinky</a></li>
+                    <li><a href="#">Školka</a></li>
+                    <li><a href="#">Naše třídy</a></li>
+                    <li><a href="#">Jídelna</a></li>
+                    <li><a href="galerie.html" class="active">Foto</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Zde začína logo s bannerem -->
+        <header class="header">
+            <aside class="logo">
+                <img class="banner" src="images/logo.png" />
+            </aside>
+            <img src="images/header.jpg" class="banner" />
+        </header>
+        <!-- Zde začína lišta -->
+        <aside class="lista">
+            <div>PRO VÝBĚR TŘÍDY &bdquo;KLIKNĚTE&ldquo; DOLE NA POSTAVIČKU</div>
+        </aside>
+        <!-- Zde končí vrchní část, která se dá includnout do všech stránek -->
+
+        <!-- Zde začína obsah stránky, který se na každé stránce mění -->
+        <main class="main">
+            <h1>Naše fotogalerie</h1>
+            <article class="article">
+                <!-- Toto je místo pro proměnné obsahující textový obsah stránek
+                {foreach $categoryItems as $item}
+                            <h1>{$item->article_title}}</h1>
+                            <p>{$item->article_text}</p> nebo <div class="article">{$item->article_text}</div>
+                {/foreach} 
+                -->
+
+                <section id="fotky" class="article">
+                    
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
+         
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
+          
+                </section>
+
+            </article>
+            <!--zde končí měnící se obsah stránky a začíná neměnný obsah-->
+
+            <!--zde je vložený odkaz na jquery, kterým zatím řeším kliknutí na část obrázku, 
+který přesměruje uživatele na dannou třídu školky.
+
+Vložený spodní obrázek barvinek-spodni_baner-zima
+-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <img src="" alt="spodni-banner" class="spodni-banner imgclick">
+            <script src="js/image-click.js"></script>
+        </main>
+
+        <!--zde začíná spodní lišta stránky-->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Footer</p>
+                <p>Footer</p>
+                <p>Footer</p>
+                <p>Footer</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="js/image-click.js"></script>
+
+</html>
