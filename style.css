@@ -379,12 +379,12 @@ article[class*=article] a p#odkaz-article:hover {
   flex-flow: row wrap;
   display: flex;
 }
-.main section#fotky div {
+.main section#fotky a {
   flex: auto;
   width: 200px;
   margin: 0.5vw;
 }
-.main section#fotky div img {
+.main section#fotky a img {
   width: 100%;
   height: auto;
   cursor: pointer;
@@ -880,7 +880,7 @@ article[class*=article] a p#odkaz-article:hover {
   }
 }
 @media screen and (max-width: 400px) {
-  section#fotky div {
+  section#fotky a {
     margin: 0;
   }
   section#fotky {

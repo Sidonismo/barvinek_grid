@@ -450,18 +450,18 @@ article[class*="article"] {
         flex-flow: row wrap; 
         display: -webkit-box;
         display: flex;
-      }
-      section#fotky div { 
-        -webkit-box-flex: auto;
-        -ms-flex: auto;
-        flex: auto; 
-        width: 200px; 
-        margin: .5vw; 
-      }
-      section#fotky div img { 
-        width: 100%; 
-        height: auto;
-        cursor: pointer; 
+        a { 
+            -webkit-box-flex: auto;
+            -ms-flex: auto;
+            flex: auto; 
+            width: 200px; 
+            margin: .5vw; 
+            img { 
+                width: 100%; 
+                height: auto;
+                cursor: pointer; 
+              }
+            }
       }
 
     article {
@@ -972,7 +972,7 @@ article[class*="article"] {
     }
 }
 @media screen and (max-width: 400px) {
-    section#fotky div { margin: 0; }
+    section#fotky a { margin: 0; }
     section#fotky { padding: 0; }
     
   }
