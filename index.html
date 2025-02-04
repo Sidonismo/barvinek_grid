@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>37. mateřská školka Plzeň, Barvínek</title>
     <link rel="stylesheet" href="style.css">
+    <!--script mění cestu k spodnímu obrázku dle ročních období např: "images/barvinek-spodni_baner-jaro.png"-->
+    <script src="obdobi.js" defer></script>
     <link href="default.css" rel="stylesheet">
     <link href="mobile.css" media="screen and (max-width: 767.98px)" rel="stylesheet">
     <link href="tablet.css" media="screen and (min-width: 768px) and (max-width: 1083.98px)" rel="stylesheet">
@@ -31,12 +33,13 @@
                 <div class="kolecko"></div>
                 <!-- Zde může být smyčka pro generování menu položek -->
                 <ul class="menu">
-                    <li><a href="#">Úvod</a></li>
-                    <li><a href="#">Novinky</a></li>
+                    <!-- U active zůstane označená aktuální stránka -->
+                    <li><a href="index.html" class="active">Úvod</a></li>
+                    <li><a href="aktuality.html">Novinky</a></li>
                     <li><a href="#">Školka</a></li>
                     <li><a href="#">Naše třídy</a></li>
                     <li><a href="#">Jídelna</a></li>
-                    <li><a href="#">Foto</a></li>
+                    <li><a href="galerie.html">Foto</a></li>
                     <li><a href="#">Kontakt</a></li>
                 </ul>
             </div>
@@ -56,6 +59,7 @@
 
         <!-- Zde začína obsah stránky, který se na každé stránce mění -->
         <main class="main">
+            <h1>Vítáme Vás!</h1>
             <article class="article">
                 <!-- Toto je místo pro proměnné obsahující textový obsah stránek
                 {foreach $categoryItems as $item}
@@ -250,7 +254,7 @@
                                 <p class="datum">25.10.2023</p>
                                 <p class="udalost">Hledáme paní učitelku</p>
                             </div>
-                            <p id="odkaz-aktuality"><a href="http://">Archiv aktualit zde</a></p>
+                            <a href="aktuality.html"><p id="odkaz-article">Archiv aktualit zde</p></a>
                         </div>
                     </article>
                     <article class="banner-galerie">
@@ -299,7 +303,7 @@
                     Vložený spodní obrázek barvinek-spodni_baner-zima
                     -->
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                    <img src="images/barvinek-spodni_baner-zima.png" alt="spodni-banner" class="spodni-banner imgclick">
+                    <img src="" alt="spodni-banner" class="spodni-banner imgclick">
                     <script src="js/image-click.js"></script>
         </main>
 

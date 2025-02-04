@@ -9,8 +9,8 @@
             "maxWidth": 1240,
             "minFontSize": 12,
             "maxFontSize": 16,
-            "minTypeScale": 1,
-            "maxTypeScale": 1.5,
+            "minTypeScale": 1.2,
+            "maxTypeScale": 1.4,
             "positiveSteps": 3,
             "negativeSteps": 3,
             "prefix": "step-",
@@ -33,7 +33,7 @@ $nadpisy-nejtmavsi: #426161;
     color: $base-color;
     text-decoration: none;
     white-space: nowrap;
-    padding: 5px;
+    padding: 2px;
 }
 
 @mixin menu-font-2() {
@@ -44,7 +44,6 @@ $nadpisy-nejtmavsi: #426161;
     color: $base-color;
     text-decoration: none;
     white-space: nowrap;
-    padding: 5px;
 }
 
 @mixin menu-font-dongle() {
@@ -75,12 +74,14 @@ $nadpisy-nejtmavsi: #426161;
         width: $width;
         object-fit: contain;
     }
+
     img.img-left {
         margin: 0.5em 1em;
         width: $width;
         float: left;
         object-fit: contain;
     }
+
     img.img-right {
         margin: 0.5em 1em;
         width: $width;
@@ -132,282 +133,10 @@ nav.nav {
     position: sticky;
     top: 0;
     background-color: $nadpisy-background;
-
-}
-
-.menu {
-    overflow: scroll;
-}
-
-.menu li {
-    width: 100%;
-    padding: 3% 0;
-}
-
-.menu li a,
-.menu li a:hover {
-    @include flex-center();
-    box-shadow: 0 -5px 0 $nadpisy-background inset,
-        500px 0 0 $nadpisy-tmave inset;
-}
-
-a .skolka {
-    display: flex;
-    justify-content: start;
-    flex-direction: row;
-    align-items: center;
-    width: 17em;
-    background-color: $nadpisy-tmave;
-
-    @include menu-font();
-}
-
-.levy-roh {
-    margin-left: 8px;
-    width: 10px;
-    height: 22px;
-}
-
-.plzen {
-    padding: 3px 3px;
-    color: $nadpisy-tmave;
-    background-color: $base-color;
-    text-shadow: none;
-}
-
-.logo {
-    display: none;
-}
-
-.header {
-    grid-area: header;
-    z-index: -1;
-
-    .banner {
-        width: 100%;
-        height: auto;
-    }
-
-}
-
-.lista {
-    position: sticky;
-    top: 2em;
-    height: 2.5em;
-    align-content: center;
-    grid-area: lista;
-    background-color: $lista;
-    padding: 20px;
-    text-align: center;
-    @include menu-font();
-}
-
-article,
-article[class*="article"] {
-    color: $nadpisy-nejtmavsi;
-    .text-justify {
-        text-align: justify;
-    }
-    .text-center {
-        text-align: center;
-    }
-    .text-left {
-        text-align: left;
-    }
-    .text-right {
-        text-align: right;
-    }
-    .font-bold {
-        font-weight: bold;
-    }
-    @include img-zarovnani(40%);
-
-    >h1 {
-        font-size: var(--step-2);
-        text-align: center;
-        padding: 2.8em;
-        padding-bottom: 0.4em;
-    }
-
-    >p,
-    .article {
-        display: inline-block;
-        background-color: #fff;
-        margin: 1em 5vw;
-        padding: 1rem;
-        border-radius: 5px;
-        box-shadow: 0 8px 6px -4px $nadpisy-background;
-    }
-}
-
-.main {
-    grid-area: main;
-    background-color: #f9f9f9;
-    padding: 0px;
-    margin: 0 auto 0 auto;
-    margin-bottom: 20vw;
-
-    article.banner-galerie {
-        color: $nadpisy-nejtmavsi;
-
-        h1 {
-            text-align: center;
-            padding: 1em;
-            padding-bottom: 1.2em;
-        }
-
-        display: flex;
-        flex-direction: column;
-        justify-content:space-around;
-
-        div.banner-fotografie {
-
-            display: flex;
-            flex-direction: column;
-            margin: 1em 4em;
-            background-color: $nadpisy-background;
-            padding: 1rem;
-            color: $base-color;
-            flex-wrap: nowrap;
-            gap: 1rem;
-
-            div.nazev-galerie {
-                object-fit: cover;
-                width: 100%;
-                object-position: center center;
-                background-color: $nadpisy-tmave;
-                color: $base-color;
-                text-align: center;
-                font-weight: bolder;
-                object-fit: cover;
-
-                p {
-                    padding: 0.4em;
-                }
-            }
-
-            a img {
-                object-fit: cover;
-                width: 100%;
-                object-position: center center;
-            }
-        }
-    }
-
-    #aktuality {
-        text-transform: uppercase;
-        @include menu-font-dongle();
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 3vw;
-
-        div[id^='box-'] {
-            flex: 47% 0 1;
-            display: flex;
-            height: 18vw;
-            max-height: 18vw;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5em;
-            background-image: url("images/aktuality.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            /* Do not repeat the image */
-            background-size: contain;
-            text-align: center;
-        }
-
-        p.datum {
-            font-size: var(--step-2);            
-            color: $base-color;
-            text-shadow: 1px 1px 2px $secondary-color;
-        }
-
-        p.udalost {
-            font-size: var(--step--0);
-            color: $secondary-color;
-        }
-
-    }
-
-    p#odkaz-aktuality {
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-weight: bold;
-
-        a {
-            color: $nadpisy-nejtmavsi;
-        }
-
-        a:hover {
-            color: $secondary-color;
-            box-shadow:  2px 3px 20px $nadpisy-background;
-        }
-    }
-
-    img.spodni-banner {
-        position: fixed;
-        bottom: 5em;
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        left: 0%;
-        cursor: pointer;
-    }
-
-    .tridy-link {
-        position: fixed;
-        bottom: 5em;
-        display: flex;
-        width: 100%;
-        height: 10em;
-        left: 0%;
-        bottom: 5em;
-
-        a {
-            width: 50%;
-            background-color: #99cccc;
-        }
-    }
-}
-
-.footer {
-    grid-area: footer;
-    position: sticky;
-    bottom: 0;
-    background-color: $nadpisy-tmave;
-    color: $base-color;
-    padding: 15px;
-
-    div.footer-text {
-        @include flex-between();
-        flex-wrap: wrap;
-
-        p {
-            width: 100%;
-            max-width: 50%;
-            flex: none;
-            text-align: center;
-        }
-
-        p:nth-child(-n+3) {
-            padding-bottom: 1em;
-        }
-    }
+    z-index: 3;
 }
 
 .nav {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 3;
-
     .navigace {
         .hamburger {
             position: fixed;
@@ -480,6 +209,16 @@ article[class*="article"] {
             display: block;
         }
 
+        .toggle-menu {
+            z-index: 8000;
+            position: fixed;
+            top: 0.5em;
+            right: 0.8em;
+            width: 60px;
+            height: 60px;
+            opacity: 0;
+        }
+
         .kolecko {
             position: fixed;
             z-index: 0;
@@ -494,6 +233,10 @@ article[class*="article"] {
         }
 
         .menu {
+            overflow: scroll;
+            @include menu-font-dongle();
+            font: optional;
+            font-size: var(--step-1);
             justify-content: start;
             flex-direction: column;
             align-items: center;
@@ -504,31 +247,451 @@ article[class*="article"] {
             width: 50%;
             height: 100%;
             padding-top: 20%;
+
+            li {
+                width: 100%;
+                padding: 0 0;
+                @include flex-center();
+
+                a {
+                    text-shadow: 1px 1px 8px $secondary-color;
+
+                    &.active,
+                    &:hover {
+                        text-shadow: 1px 1px 3px $secondary-color;
+                        border-bottom: 1px solid $nadpisy-background;
+                    }
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 0.2em;
+                        border-top: 1px solid $nadpisy-background;
+                        border-bottom: 2px solid $nadpisy-nejtmavsi;
+                        opacity: 0;
+                        transition: 1s;
+                    }
+
+                    &:after {
+                        display: block;
+                        content: "";
+                        width: 10em;
+                        height: 0.5em;
+                        background-color: $nadpisy-nejtmavsi;
+                        transform: scale(0);
+                        opacity: 0;
+                        transition: .5s;
+                        z-index: -1;
+                    }
+
+                    &:hover {
+                        color: #fff;
+
+                        &:before {
+                            transform: scaleY(1);
+                            opacity: 1;
+                        }
+
+                        &:after {
+                            transform: scaleY(1);
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
         }
 
-        .toggle-menu {
-            z-index: 8000;
-            position: fixed;
-            top: 0.5em;
-            right: 0.8em;
-            width: 60px;
-            height: 60px;
-            opacity: 0;
-        }
+    }
+}
 
-        .menu li a {
-            padding: 5px;
-            text-shadow: 1px 1px 8px $secondary-color;
-        }
+a .skolka {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: center;
+    width: 17em;
+    background-color: $nadpisy-tmave;
 
-        .menu li a:hover {
-            text-shadow: 5px 5px 10px $secondary-color;
-            box-shadow: 0px -50px 10px $lista inset,
-                200px 0 0 $nadpisy-tmave inset;
+    @include menu-font();
+    padding-left: 1em;
+}
+
+.levy-roh {
+    margin-left: 8px;
+    width: 10px;
+    height: 26px;
+}
+
+.plzen {
+    padding: 3px 3px;
+    color: $nadpisy-tmave;
+    background-color: $base-color;
+    text-shadow: none;
+}
+
+.logo {
+    display: none;
+}
+
+.header {
+    grid-area: header;
+    z-index: 2;
+
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+.lista {
+    position: sticky;
+    top: 1.7em;
+    height: 2.5em;
+    align-content: center;
+    grid-area: lista;
+    background-color: $lista;
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+    @include menu-font();
+}
+
+article,
+article[class*="article"] {
+    color: $nadpisy-nejtmavsi;
+
+    .text-justify {
+        text-align: justify;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .font-bold {
+        font-weight: bold;
+    }
+
+    @include img-zarovnani(40%);
+
+    >h1 {
+        font-size: var(--step-2);
+        text-align: center;
+        padding: 2.8em;
+        padding-bottom: 0.4em;
+    }
+
+    >p,
+    .article {
+        display: inline-block;
+        background-color: #fff;
+        margin: 1em 5vw;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 8px 6px -4px $nadpisy-background;
+    }
+
+    a,
+    a:visited {
+        @include menu-font-dongle();
+        color: $nadpisy-nejtmavsi;
+    }
+
+    a {
+        width: 100%;
+        margin-top: 20px;
+
+        p#odkaz-article {
+            font-size: var(--step-1);
+            text-align: center;
+            font-weight: bold !important;
+            color: $nadpisy-nejtmavsi;
+            margin-bottom: 20px;
+
+            &:hover {
+                color: $secondary-color;
+                box-shadow: 2px 3px 20px $nadpisy-background;
+                width: 50%;
+                margin: auto;
+                margin-bottom: 20px;
+            }
         }
     }
 }
 
+
+.main {
+    position: relative;
+    grid-area: main;
+    background-color: #f9f9f9;
+    padding: 0px;
+    margin: 0 auto 0 auto;
+    margin-bottom: 20vw;
+    z-index: 1;
+
+    section#fotky { 
+        padding: .5vw;
+        font-size: 0;
+        display: -ms-flexbox;
+        -ms-flex-wrap: wrap;
+        -ms-flex-direction: column;
+        -webkit-flex-flow: row wrap; 
+        flex-flow: row wrap; 
+        display: -webkit-box;
+        display: flex;
+        a { 
+            -webkit-box-flex: auto;
+            -ms-flex: auto;
+            flex: auto; 
+            width: 200px; 
+            margin: .5vw; 
+            img { 
+                width: 100%; 
+                height: auto;
+                cursor: pointer; 
+              }
+            }
+      }
+
+    article {
+        section.cards {
+
+            background-color: #fff;
+            margin: 1em 5vw;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 8px 6px -4px $nadpisy-background;
+
+            .card {
+                background: white;
+                margin-bottom: 2em;
+
+                &:hover {
+                    box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+                }
+
+                a {
+                    color: black;
+                    text-decoration: none;
+
+                    picture img {
+                        display: block;
+                        border: 0;
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    div.card-content {
+                        padding: 1.4em;
+
+                        h2 {
+                            @include menu-font-dongle();
+                            font-size: var(--step-2);
+                            color: #007489;
+                            margin-top: 0;
+                            margin-bottom: .5em;
+                            font-weight: bold;
+                            line-height: 20px;
+                        }
+
+                        div.datum {
+                            font-size: var(--step-0);
+                            position: relative;
+                            top: 0.1em;
+                            float: right;
+                            background-color: $lista;
+                            color: $base-color;
+                            padding: 5px;
+                            margin-bottom: 10px;
+                            max-width: fit-content;
+                            border-radius: 10px;
+                            z-index: 1;
+                        }
+
+                        p {
+                            font-size: var(--step-0);
+                            margin-bottom: 1.5em;
+                            color: $nadpisy-nejtmavsi;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    >h1 {
+        margin-top: 2em;
+        color: $base-color;
+        text-align: center;
+        background-image: url('images/nadpisy.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding: 3px;
+
+        &:before {
+            display: block;
+            content: "";
+            width: 70%;
+            height: 5px;
+            transform: translate(0px, -520%);
+            background-color: $nadpisy-tmave;
+            margin: auto;
+            transition: 1s;
+        }
+    }
+
+    article.banner-galerie {
+        color: $nadpisy-nejtmavsi;
+
+        h1 {
+            text-align: center;
+            padding: 1em;
+            padding-bottom: 1.2em;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+
+        div.banner-fotografie {
+
+            display: flex;
+            flex-direction: column;
+            margin: 1em 4em;
+            background-color: $nadpisy-background;
+            padding: 1rem;
+            color: $base-color;
+            flex-wrap: nowrap;
+            gap: 1rem;
+
+            div.nazev-galerie {
+                object-fit: cover;
+                width: 100%;
+                object-position: center center;
+                background-color: $nadpisy-tmave;
+                color: $base-color;
+                text-align: center;
+                font-weight: bolder;
+                object-fit: cover;
+
+                p {
+                    padding: 0.4em;
+                }
+            }
+
+            a img {
+                object-fit: cover;
+                width: 100%;
+                object-position: center center;
+            }
+        }
+    }
+
+    #aktuality {
+        text-transform: uppercase;
+        @include menu-font-dongle();
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 3vw;
+
+        div[id^='box-'] {
+            flex: 47% 0 1;
+            display: flex;
+            height: 18vw;
+            max-height: 18vw;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5em;
+            background-image: url("images/aktuality.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            text-align: center;
+        }
+
+        p.datum {
+            font-size: var(--step-2);
+            color: $base-color;
+            text-shadow: 1px 1px 2px $secondary-color;
+        }
+
+        p.udalost {
+            font-size: var(--step--0);
+            color: $secondary-color;
+        }
+
+    }
+
+
+    img.spodni-banner {
+        position: fixed;
+        bottom: 5em;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        left: 0%;
+        cursor: pointer;
+    }
+
+    .tridy-link {
+        position: fixed;
+        bottom: 5em;
+        display: flex;
+        width: 100%;
+        height: 10em;
+        left: 0%;
+        bottom: 5em;
+
+        a {
+            width: 50%;
+            background-color: #99cccc;
+        }
+    }
+}
+
+.footer {
+    grid-area: footer;
+    position: sticky;
+    bottom: 0;
+    background-color: $nadpisy-tmave;
+    color: $base-color;
+    padding: 15px;
+    z-index: 2;
+
+    div.footer-text {
+        @include flex-between();
+        flex-wrap: wrap;
+
+        p {
+            width: 100%;
+            max-width: 50%;
+            flex: none;
+            text-align: center;
+        }
+
+        p:nth-child(-n+3) {
+            padding-bottom: 1em;
+        }
+    }
+}
 
 /* Větší obrazovka */
 @media only screen and (min-width: 897px) {
@@ -556,10 +719,9 @@ article[class*="article"] {
         width: 90%;
         max-width: 940px;
         margin: 0 auto 0 auto;
+        z-index: 0;
 
         .nazev {
-
-
             a .skolka {
                 display: flex;
                 justify-content: start;
@@ -567,6 +729,8 @@ article[class*="article"] {
                 align-items: center;
                 background-color: $nadpisy-tmave;
                 @include menu-font-2();
+                padding-left: 1em;
+                height: 2.5em;
             }
 
             a {
@@ -576,7 +740,7 @@ article[class*="article"] {
             .levy-roh {
                 margin-left: 8px;
                 width: 10px;
-                height: 22px;
+                height: 24px;
             }
 
             .plzen {
@@ -588,6 +752,7 @@ article[class*="article"] {
         }
 
         .navigace {
+            height: 2.4em;
 
             @include flex-between();
 
@@ -610,21 +775,47 @@ article[class*="article"] {
                 all: unset;
                 @include flex-between();
                 @include menu-font-2();
+
+                li {
+                    padding: 0px 0em;
+
+                    a {
+                        padding: 2em 0.8em;
+
+                        &.active,
+                        &:hover {
+                            border-radius: 25px;
+                            border-bottom: 0;
+                            box-shadow: 0 -5px 0 #99cccc inset,
+                                300px 0 0 rgba(112, 149, 149, 0.9) inset;
+                            transition: 1s;
+                        }
+
+                        &:before {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 0.2em;
+                            border-top: 1px solid $base-color;
+                            border-bottom: 2px solid $nadpisy-nejtmavsi;
+                            opacity: 0;
+                            transition: 1s;
+                        }
+
+                        &:after {
+                            display: block;
+                            content: "";
+                            width: 100%;
+                            height: 0.1em;
+                            background-color: $nadpisy-background;
+                            transform: scale(0);
+                            opacity: 0;
+                            transition: 1s;
+                            z-index: 0;
+                        }
+                    }
+                }
             }
-
-            .menu li {
-                padding: 0 7px;
-            }
-
-            .menu li a {
-                box-shadow: none;
-            }
-
-            menu li a:hover {
-                box-shadow: 0 -5px 0 #99cccc inset, 300px 0 0 rgba(112, 149, 149, 0.9) inset;
-            }
-
-
         }
     }
 
@@ -642,13 +833,16 @@ article[class*="article"] {
         width: 90%;
         max-width: 940px;
         margin: 0 auto 0 auto;
+        z-index: 2;
     }
 
     main {
         grid-area: main;
         width: 90%;
         max-width: 940px;
-        article img.img-right, article[class*="article"] {
+
+        article img.img-right,
+        article[class*="article"] {
             @include img-zarovnani(33%);
         }
 
@@ -677,8 +871,6 @@ article[class*="article"] {
                         padding: 0.4em;
                     }
                 }
-
-                a img {}
             }
 
         }
@@ -715,24 +907,28 @@ article[class*="article"] {
             width: 240%;
             left: -70%;
         }
-        main article img.img-right, article[class*="article"] {
-        img {
-            width: 100%;
-            margin: 1em 0;
-            object-fit: contain;
+
+        main article img.img-right,
+        article[class*="article"] {
+            img {
+                width: 100%;
+                margin: 1em 0;
+                object-fit: contain;
+            }
+
+            img.img-left {
+                margin: 1em 0;
+                width: 100%;
+                object-fit: contain;
+            }
+
+            img.img-right {
+                margin: 1em 0;
+                width: 100%;
+                object-fit: contain;
+            }
         }
-        img.img-left {
-            margin: 1em 0;
-            width: 100%;
-            object-fit: contain;
-        }
-        img.img-right {
-            margin: 1em 0;
-            width: 100%;
-            object-fit: contain;
-        }
-    }
-        
+
     }
 }
 
@@ -742,7 +938,7 @@ article[class*="article"] {
 
         .banner {
             position: absolute;
-            z-index: 0;
+            z-index: 1;
             top: 3.1rem;
             padding-left: 20px;
             width: 15%;
@@ -750,3 +946,33 @@ article[class*="article"] {
         }
     }
 }
+
+@media screen and (min-width: 40em) {
+    /* Flexbox stuff */
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 1 24%;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 60em) {
+
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+@media screen and (max-width: 400px) {
+    section#fotky a { margin: 0; }
+    section#fotky { padding: 0; }
+    
+  }
