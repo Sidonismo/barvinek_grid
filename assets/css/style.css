@@ -293,24 +293,21 @@ article[class*=article] .font-bold {
 article img,
 article[class*=article] img {
   width: 40%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 article img.img-left,
 article[class*=article] img.img-left {
   margin: 0.5em 1em;
   width: 40%;
   float: left;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 article img.img-right,
 article[class*=article] img.img-right {
   margin: 0.5em 1em;
   width: 40%;
   float: right;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 article > h1,
 article[class*=article] > h1 {
@@ -376,10 +373,15 @@ article[class*=article] a p#odkaz-article:hover {
   font-size: 0;
   display: -ms-flexbox;
   -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+  display: -webkit-box;
   display: flex;
 }
 .main section#fotky a {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
   flex: auto;
   width: 200px;
   margin: 0.5vw;
@@ -437,7 +439,6 @@ article[class*=article] a p#odkaz-article:hover {
   color: #fff;
   padding: 5px;
   margin-bottom: 10px;
-  max-width: -moz-fit-content;
   max-width: fit-content;
   border-radius: 10px;
   z-index: 0;
@@ -489,11 +490,9 @@ article[class*=article] a p#odkaz-article:hover {
   gap: 1rem;
 }
 .main article.banner-galerie div.banner-fotografie div.nazev-galerie {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
-  -o-object-position: center center;
-     object-position: center center;
+  object-position: center center;
   background-color: #709595;
   color: #fff;
   text-align: center;
@@ -504,11 +503,9 @@ article[class*=article] a p#odkaz-article:hover {
   padding: 0.4em;
 }
 .main article.banner-galerie div.banner-fotografie a img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
-  -o-object-position: center center;
-     object-position: center center;
+  object-position: center center;
 }
 .main #aktuality {
   text-transform: uppercase;
@@ -760,24 +757,21 @@ article[class*=article] a p#odkaz-article:hover {
   main article img.img-right img,
   main article[class*=article] img {
     width: 33%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   main article img.img-right img.img-left,
   main article[class*=article] img.img-left {
     margin: 0.5em 1em;
     width: 33%;
     float: left;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   main article img.img-right img.img-right,
   main article[class*=article] img.img-right {
     margin: 0.5em 1em;
     width: 33%;
     float: right;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   main article.banner-galerie {
     color: #426161;
@@ -829,22 +823,19 @@ article[class*=article] a p#odkaz-article:hover {
   .main article[class*=article] img {
     width: 100%;
     margin: 1em 0;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .main main article img.img-right img.img-left,
   .main article[class*=article] img.img-left {
     margin: 1em 0;
     width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .main main article img.img-right img.img-right,
   .main article[class*=article] img.img-right {
     margin: 1em 0;
     width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 @media only screen and (min-width: 420px) {
@@ -886,4 +877,6 @@ article[class*=article] a p#odkaz-article:hover {
   section#fotky {
     padding: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
