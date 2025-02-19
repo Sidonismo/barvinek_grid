@@ -556,7 +556,6 @@ article[class*=article] a p#odkaz-article:hover {
   justify-content: center;
   width: 100%;
   left: 0%;
-  cursor: pointer;
 }
 .main .tridy-link {
   position: fixed;

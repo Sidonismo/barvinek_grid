@@ -1,16 +1,3 @@
-var delay = function (elem, callback) {
-    var timeout = null;
-    elem.onmouseover = function() {
-        // Set timeout to be a timer which will invoke callback after 1s
-        timeout = setTimeout(callback, 1000);
-    };
-
-    elem.onmouseout = function() {
-        // Clear any timers set to timeout
-        clearTimeout(timeout);
-    }
-};
-
 function handleImageClick(event) {
     const img = event.target;
     const rect = img.getBoundingClientRect();
@@ -35,15 +22,25 @@ function handleImageClick(event) {
     if (clickY >= centerTop && clickY <= centerBottom && clickX >= leftExclusion && clickX <= rightExclusion) {
         if (clickX < middleBoundary) {
             zone = "Left Center";
-            window.location.href = "trida_1.html";
+            if (event.type == "mousemove") {
+                img.style.cursor = "pointer";
+            } else {
+                window.location.href = "trida_1.html";
+            }
         } else {
             zone = "Right Center";
-            window.location.href = "trida_2.html";
+            if (event.type == "mousemove") {
+                img.style.cursor = "pointer";
+            } else {
+                window.location.href = "trida_2.html";
+            }
         }
         console.log(`Clicked in ${zone}`);
     } else {
         console.log("Clicked outside allowed zones");
+        img.style.cursor = ""
     }
 }
 
+document.querySelector(".imgclick").addEventListener("mousemove", handleImageClick);
 document.querySelector(".imgclick").addEventListener("click", handleImageClick);
