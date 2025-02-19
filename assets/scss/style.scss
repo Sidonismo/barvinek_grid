@@ -609,7 +609,8 @@ article[class*="article"] {
         justify-content: space-around;
         gap: 3vw;
 
-        div[id^='box-'] {
+        div[id^='box-'],
+        a[id^='box-'] {
             flex: 47% 0 1;
             display: flex;
             height: 18vw;
