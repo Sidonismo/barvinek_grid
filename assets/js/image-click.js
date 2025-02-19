@@ -1,12 +1,11 @@
-$('.imgclick').click(function (e){
+document.querySelectorAll('.imgclick').forEach(function(elm) {
+    elm.addEventListener('click', function(e) {
+        var xPos = e.pageX - elm.getBoundingClientRect().left;
 
-    var elm = $(this);
-    var xPos = e.pageX - elm.offset().left;
-
-    if((elm.width() / 2) >= xPos){
-        window.location.href = "trida_1.html";
-    } else {
-        window.location.href = "trida_2.html";
-    }
-
+        if ((elm.clientWidth / 2) >= xPos) {
+            window.location.href = "trida_1.html";
+        } else {
+            window.location.href = "trida_2.html";
+        }
+    });
 });
