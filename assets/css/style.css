@@ -467,7 +467,7 @@ article[class*=article] a p#odkaz-article:hover {
 .main div.nadpis > h1 {
   padding: 3px 24px;
   transform: skew(23deg);
-  font-size: var(--step-3);
+  font-size: var(--step-2);
 }
 .main div.nadpis > h1:before {
   content: "";
