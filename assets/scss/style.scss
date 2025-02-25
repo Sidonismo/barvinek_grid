@@ -393,7 +393,8 @@ article[class*="article"] {
     }
 
     >p.article,
-    .article {
+    >div.article,
+    >section.article {
         display: inline-block;
         background-color: #fff;
         margin: 1em 5vw;

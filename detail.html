@@ -55,8 +55,10 @@
 
         <!-- Zde začína obsah stránky, který se na každé stránce mění -->
         <main class="main">
-            <h1>Novinka č. 1</h1>
-            <article class="article">
+            <div class="nadpis">
+                <h1>Novinka č. 1</h1>
+            </div>
+            <article>
                 <!-- Toto je místo pro proměnné obsahující textový obsah stránek
                 {foreach $categoryItems as $item}
                             <h1>{$item->article_title}}</h1>
@@ -65,7 +67,7 @@
                 -->
 
                 <!--Třídou text-left zarovnáme text do leva-->
-                <p class="text-left font-bold">
+                <p class="text-left font-bold article">
                     <!--Třídou img-right vložíme obrázek do leva-->
                     <img src="images/foto skolky.png" class="img-left">
                     Málo používaný způsob uvozování představují francouzské uvozovky. »Ohraničují citaci.« Do HTML se

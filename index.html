@@ -85,21 +85,23 @@
                     nebo mám dlouhý text, který se nebude nikdy měnit, takže se vyplatí prohnat to nějakým programem
                     pro zaměňování (nejčastěji prostě jenom Edit> Replace).
                 </p>
-                <p style="text-align: center;"><span style="font-size: x-large;">Vážení rodiče, </span></p>
-                <p style="text-align: center;"><span style="font-size: x-large;">nově můžete na&nbsp;našich webových
-                        stránkách </span></p>
-                <p style="text-align: center;"><span style="font-size: x-large;">sledovat fotky jídel z&nbsp;naší školní
-                        jídelny.</span></p>
-                <p style="text-align: center;"></p>
-                <p style="text-align: center;"><span style="color: #ff3366;"><span><span style="font-size: x-large;">Vše
-                                najdete v&nbsp;sekci foto / školní jídelna</span></span></span></p>
-                <p style="text-align: center;"></p>
-                <p style="text-align: center;"><span style="font-size: x-large;">Vybrané recepty pak najdete
-                        na&nbsp;školní nástěnce.</span></p>
-                <p style="text-align: center;"><span style="font-size: x-large;">&nbsp;&nbsp;&nbsp; <img alt=""
-                            style="height: 224px; width: 180px;"
-                            src="https://s3.eu-central-1.amazonaws.com/tf-dev-ms37/data/migration/Files/ms37/CKAV0204.JPG" /></span>
-                </p>
+                <div class="article">
+                    <p style="text-align: center;"><span style="font-size: x-large;">Vážení rodiče, </span></p>
+                    <p style="text-align: center;"><span style="font-size: x-large;">nově můžete na&nbsp;našich webových
+                            stránkách </span></p>
+                    <p style="text-align: center;"><span style="font-size: x-large;">sledovat fotky jídel z&nbsp;naší školní
+                            jídelny.</span></p>
+                    <p style="text-align: center;"></p>
+                    <p style="text-align: center;"><span style="color: #ff3366;"><span><span style="font-size: x-large;">Vše
+                                    najdete v&nbsp;sekci foto / školní jídelna</span></span></span></p>
+                    <p style="text-align: center;"></p>
+                    <p style="text-align: center;"><span style="font-size: x-large;">Vybrané recepty pak najdete
+                            na&nbsp;školní nástěnce.</span></p>
+                    <p style="text-align: center;"><span style="font-size: x-large;">&nbsp;&nbsp;&nbsp; <img alt=""
+                                style="height: 224px; width: 180px;"
+                                src="https://s3.eu-central-1.amazonaws.com/tf-dev-ms37/data/migration/Files/ms37/CKAV0204.JPG" /></span>
+                    </p>
+                </div>
 
                 <h1>Vnořené uvozovky</h1>
 
@@ -330,5 +332,33 @@
         </footer>
     </div>
 </body>
-
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+    </script> 
 </html>

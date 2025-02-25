@@ -320,9 +320,11 @@ article[class*=article] > h1 {
   padding-bottom: 0.4em;
 }
 article > p.article,
-article .article,
+article > div.article,
+article > section.article,
 article[class*=article] > p.article,
-article[class*=article] .article {
+article[class*=article] > div.article,
+article[class*=article] > section.article {
   display: inline-block;
   background-color: #fff;
   margin: 1em 5vw;
