@@ -356,7 +356,7 @@ a .skolka {
     padding: 20px;
     text-align: center;
     z-index: 2;
-    margin-top: -O.3em;
+    margin-top: -0.3em;
     @include menu-font();
 }
 
@@ -395,7 +395,8 @@ article[class*="article"] {
 
     >p.article,
     >div.article,
-    >section.article {
+    >section.article,
+    >article.article {
         display: inline-block;
         background-color: #fff;
         margin: 1em 5vw;

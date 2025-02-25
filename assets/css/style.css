@@ -35,7 +35,7 @@ body {
   background-size: cover;
 }
 
-.kontejner {
+.container {
   display: grid;
   grid-template-areas: "navigace" "header" "lista" "main" "footer";
   grid-template-columns: 100%;
@@ -256,6 +256,7 @@ a .skolka {
   padding: 20px;
   text-align: center;
   z-index: 2;
+  margin-top: -0.3em;
   font-family: "Roboto", serif;
   text-transform: uppercase;
   font-weight: 800;
@@ -322,9 +323,11 @@ article[class*=article] > h1 {
 article > p.article,
 article > div.article,
 article > section.article,
+article > article.article,
 article[class*=article] > p.article,
 article[class*=article] > div.article,
-article[class*=article] > section.article {
+article[class*=article] > section.article,
+article[class*=article] > article.article {
   display: inline-block;
   background-color: #fff;
   margin: 1em 5vw;
@@ -606,7 +609,7 @@ article[class*=article] a p#odkaz-article:hover {
 
 /* Větší obrazovka */
 @media only screen and (min-width: 897px) {
-  .kontejner {
+  .container {
     grid-template-areas: "navigace" "header" "lista" "main" "footer";
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -755,7 +758,7 @@ article[class*=article] a p#odkaz-article:hover {
     white-space: nowrap;
     width: 90%;
     max-width: 940px;
-    margin: 0 auto 0 auto;
+    margin: -0.3em auto 0 auto;
     z-index: 3;
   }
   main {
