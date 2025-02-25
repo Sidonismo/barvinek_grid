@@ -55,7 +55,10 @@
 
         <!-- Zde začína obsah stránky, který se na každé stránce mění -->
         <main class="main">
-            <h1>Vítáme Vás!</h1>
+            <div class="nadpis">
+                <h1>Testovací článek s delším názvem, který je ještě delší</h1>
+            </div>
+            
             <article class="article">
                 <!-- Toto je místo pro proměnné obsahující textový obsah stránek
                 {foreach $categoryItems as $item}
@@ -65,7 +68,7 @@
                 -->
 
                 <!--Třídou text-left zarovnáme text do leva-->
-                <p class="text-left font-bold">
+                <p class="text-left font-bold article">
                     <!--Třídou img-right vložíme obrázek do leva-->
                     <img src="images/foto skolky.png" class="img-left">
                     Málo používaný způsob uvozování představují francouzské uvozovky. »Ohraničují citaci.« Do HTML se
@@ -82,10 +85,25 @@
                     nebo mám dlouhý text, který se nebude nikdy měnit, takže se vyplatí prohnat to nějakým programem
                     pro zaměňování (nejčastěji prostě jenom Edit> Replace).
                 </p>
+                <p style="text-align: center;"><span style="font-size: x-large;">Vážení rodiče, </span></p>
+                <p style="text-align: center;"><span style="font-size: x-large;">nově můžete na&nbsp;našich webových
+                        stránkách </span></p>
+                <p style="text-align: center;"><span style="font-size: x-large;">sledovat fotky jídel z&nbsp;naší školní
+                        jídelny.</span></p>
+                <p style="text-align: center;"></p>
+                <p style="text-align: center;"><span style="color: #ff3366;"><span><span style="font-size: x-large;">Vše
+                                najdete v&nbsp;sekci foto / školní jídelna</span></span></span></p>
+                <p style="text-align: center;"></p>
+                <p style="text-align: center;"><span style="font-size: x-large;">Vybrané recepty pak najdete
+                        na&nbsp;školní nástěnce.</span></p>
+                <p style="text-align: center;"><span style="font-size: x-large;">&nbsp;&nbsp;&nbsp; <img alt=""
+                            style="height: 224px; width: 180px;"
+                            src="https://s3.eu-central-1.amazonaws.com/tf-dev-ms37/data/migration/Files/ms37/CKAV0204.JPG" /></span>
+                </p>
 
                 <h1>Vnořené uvozovky</h1>
 
-                <p class="text-left">Vysvětlím to takto: „V přímé řeči se může vyskytnout ‚citace‘. Pak se už
+                <p class="text-left article">Vysvětlím to takto: „V přímé řeči se může vyskytnout ‚citace‘. Pak se už
                     nepoužívají dvojité
                     uvozovky, ale jednoduché uvozovky.“ Jsou to prostě takové znaky ‚‘ , které bývají chybně zaměňovány
                     za čárky a apostrofy.

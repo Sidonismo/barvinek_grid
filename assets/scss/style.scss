@@ -392,7 +392,7 @@ article[class*="article"] {
         padding-bottom: 0.4em;
     }
 
-    >p,
+    >p.article,
     .article {
         display: inline-block;
         background-color: #fff;
@@ -530,19 +530,21 @@ article[class*="article"] {
             }
         }
     }
+div.nadpis{
+    display: block;
+    margin: 2em auto;
+    text-align: center;
+    color: $base-color;
+    background-color: $nadpisy-nejtmavsi;
+    transform: skew(-23deg);
+    width: fit-content;
+    max-width: 80%;
 
     >h1 {
-        margin-top: 2em;
-        color: $base-color;
-        text-align: center;
-        background-image: url('../../images/nadpisy.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        padding: 3px;
+        padding: 3px 24px;
+        transform: skew(23deg);
 
         &:before {
-            display: block;
             content: "";
             width: 70%;
             height: 5px;
@@ -552,6 +554,8 @@ article[class*="article"] {
             transition: 1s;
         }
     }
+}
+    
 
     article.banner-galerie {
         color: $nadpisy-nejtmavsi;
