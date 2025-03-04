@@ -158,7 +158,7 @@ nav.nav {
   padding: 0 0;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   transition: 0.7s;
 }
@@ -200,6 +200,24 @@ nav.nav {
 .nav .navigace .menu li a:hover:after {
   transform: scaleY(1);
   opacity: 1;
+}
+.nav .navigace #nav ul {
+  display: none;
+}
+.nav .navigace #nav li:hover ul {
+  display: block;
+  background-color: #5d8484;
+}
+.nav .navigace #nav:hover ul li a {
+  border-radius: 0;
+  border-bottom: 0;
+  transition: 1s;
+  padding: 5px;
+  margin: 0;
+  font-size: var(--step-0);
+}
+.nav .navigace #nav:hover ul li {
+  align-items: start;
 }
 
 a .skolka {
@@ -747,6 +765,12 @@ article[class*=article] a p#odkaz-article:hover {
     opacity: 0;
     transition: 1s;
     z-index: 0;
+  }
+  .nav .navigace #nav li:hover ul {
+    background-color: #99cccc;
+  }
+  .nav .navigace #nav li:hover ul li a {
+    font-size: 0.86rem;
   }
   .header {
     grid-area: header;
