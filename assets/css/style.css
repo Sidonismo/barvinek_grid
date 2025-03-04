@@ -219,6 +219,13 @@ nav.nav {
 .nav .navigace #nav:hover ul li {
   align-items: start;
 }
+.nav .navigace #nav:hover ul li ul {
+  color: #000;
+  text-transform: none;
+}
+.nav .navigace #nav li ul a {
+  text-transform: none;
+}
 
 a .skolka {
   display: flex;
@@ -770,7 +777,7 @@ article[class*=article] a p#odkaz-article:hover {
     background-color: #99cccc;
   }
   .nav .navigace #nav li:hover ul li a {
-    font-size: 0.86rem;
+    font-size: var(--step-0);
   }
   .header {
     grid-area: header;

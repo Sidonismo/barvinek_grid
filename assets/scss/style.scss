@@ -328,6 +328,17 @@ nav.nav {
             &:hover ul {
                 li {
                     align-items: start;
+
+                    ul {
+                        color: #000;
+                        text-transform: none;
+                    }
+                }
+            }
+
+            li {
+                ul a {
+                    text-transform: none;
                 }
             }
         }
@@ -867,7 +878,8 @@ article[class*="article"] {
             #nav li:hover ul {
                 background-color: $nadpisy-background;
                 li a {
-                    font-size: .86rem;
+                    font-size: var(--step-0);
+
                 }
             }
         }
