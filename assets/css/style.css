@@ -315,6 +315,12 @@ article .font-bold,
 article[class*=article] .font-bold {
   font-weight: bold;
 }
+article div.fit-img,
+article[class*=article] div.fit-img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
 article img,
 article[class*=article] img {
   width: 40%;
@@ -333,9 +339,11 @@ article img.img-right,
 article[class*=article] img.img-right {
   margin: 0.5em 1em;
   width: 40%;
+  height: 100%;
   float: right;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 100%;
 }
 article > h1,
 article[class*=article] > h1 {
@@ -358,6 +366,7 @@ article[class*=article] > article.article {
   padding: 1rem 1rem 2.4rem 1rem;
   border-radius: 5px;
   box-shadow: 0 8px 6px -4px #99cccc;
+  overflow: auto;
 }
 article a,
 article a:visited,
@@ -805,6 +814,12 @@ article[class*=article] a p#odkaz-article:hover {
     width: 90%;
     max-width: 940px;
   }
+  main article img.img-right div.fit-img,
+  main article[class*=article] div.fit-img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+  }
   main article img.img-right img,
   main article[class*=article] img {
     width: 33%;
@@ -823,9 +838,11 @@ article[class*=article] a p#odkaz-article:hover {
   main article[class*=article] img.img-right {
     margin: 0.5em 1em;
     width: 33%;
+    height: 100%;
     float: right;
-    -o-object-fit: contain;
-       object-fit: contain;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-height: 100%;
   }
   main article.banner-galerie {
     color: #426161;
