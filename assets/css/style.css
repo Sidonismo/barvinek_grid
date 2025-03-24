@@ -212,7 +212,7 @@ article[class*=article] a p#odkaz-article:hover {
   padding: 0px;
   margin: 0 auto 0 auto;
   margin-bottom: 20vw;
-  z-index: -1;
+  z-index: 0;
 }
 .main section#fotky {
   padding: 0.5vw;
@@ -816,7 +816,7 @@ article[class*=article] a p#odkaz-article:hover {
     width: 90%;
     max-width: 940px;
     margin: -0.3em auto 0 auto;
-    z-index: 0;
+    z-index: 1;
   }
   main {
     display: block;

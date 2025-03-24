@@ -281,7 +281,7 @@ article[class*="article"] {
     padding: 0px;
     margin: 0 auto 0 auto;
     margin-bottom: 20vw;
-    z-index: -1;
+    z-index: 0;
 
     section#fotky {
         padding: .5vw;
@@ -944,7 +944,7 @@ article[class*="article"] {
         width: 90%;
         max-width: 940px;
         margin: -0.3em auto 0 auto;
-        z-index: 0;
+        z-index: 1;
     }
 
     main {
