@@ -765,9 +765,6 @@ article[class*=article] a p#odkaz-article:hover {
     float: left;
     overflow: hidden;
   }
-  .nav .navigace .menu li .active {
-    background-color: #8fbaba;
-  }
   .nav .navigace .menu li a {
     cursor: pointer;
     border: #8fbaba 1px solid;
@@ -962,4 +959,4 @@ article[class*=article] a p#odkaz-article:hover {
   section#fotky {
     padding: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style-sub.css.map */

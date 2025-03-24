@@ -64,7 +64,7 @@
             <div class="nadpis">
                 <h1>Testovací článek s delším názvem, který je ještě delší</h1>
             </div>
-            
+
             <article class="article">
                 <!-- Toto je místo pro proměnné obsahující textový obsah stránek
                 {foreach $categoryItems as $item}
@@ -74,31 +74,42 @@
                 -->
 
                 <!--Třídou text-left zarovnáme text do leva-->
-                <p class="text-left font-bold article">
+                <article class="text-left font-bold article">
                     <!--Třídou img-right vložíme obrázek do leva-->
-                    <img src="images/foto skolky.png" class="img-left">
-                    Málo používaný způsob uvozování představují francouzské uvozovky. »Ohraničují citaci.« Do HTML se
-                    vkládají entitami &raquo; a &laquo;. Zřídka se mohou nahrazovat dvojicí menšítek a většítek
-                    je to ale nepraktické a nehezké. V českých textech působí francouzské uvozovky netradičně, ale
-                    kolem důležitého citátu jsou velmi vhodné. Mimochodem když si pořádně prohlédnete tvar
-                    francouzských uvozovek, pochopíte, proč mají kulaté uvozovky tvar 99 a 66. Co používat Psát
-                    kulaté uvozovky při běžné práci pomocí altu nebo entitami je pakárna dobrá tak akorát na
-                    zblbnutí.
+                    <p>
+                        <img src="images/foto skolky.png" class="img-left">
+                        Málo používaný způsob uvozování představují francouzské uvozovky. »Ohraničují citaci.« Do HTML
+                        se
+                        vkládají entitami &raquo; a &laquo;. Zřídka se mohou nahrazovat dvojicí menšítek a většítek
+                        je to ale nepraktické a nehezké. V českých textech působí francouzské uvozovky netradičně, ale
+                        kolem důležitého citátu jsou velmi vhodné. Mimochodem když si pořádně prohlédnete tvar
+                        francouzských uvozovek, pochopíte, proč mají kulaté uvozovky tvar 99 a 66. Co používat Psát
+                        kulaté uvozovky při běžné práci pomocí altu nebo entitami je pakárna dobrá tak akorát na
+                        zblbnutí.
+                    </p>
+
                     <!--Třídou img-right vložíme obrázek do prava-->
-                    <img src="images/foto skolky.png" class="img-right">
-                    Doporučuji raději používat rovné uvozovky, už proto, že si na ně čtenáři na internetu
-                    zvykli. Kulaté uvozovky používám jedině pokud: mám krátký text, na kterém mi enormně záleží,
-                    nebo mám dlouhý text, který se nebude nikdy měnit, takže se vyplatí prohnat to nějakým programem
-                    pro zaměňování (nejčastěji prostě jenom Edit> Replace).
-                </p>
+                    <div class="fit-img"><img src="images/foto skolky.png" class="img-right"></div>
+
+                    <p>
+                        Doporučuji raději používat rovné uvozovky, už proto, že si na ně čtenáři na internetu
+                        zvykli. Kulaté uvozovky používám jedině pokud: mám krátký text, na kterém mi enormně záleží,
+                        nebo mám dlouhý text, který se nebude nikdy měnit, takže se vyplatí prohnat to nějakým programem
+                        pro zaměňování (nejčastěji prostě jenom Edit> Replace).
+
+                    </p>
+
+                </article>
                 <div class="article">
                     <p style="text-align: center;"><span style="font-size: x-large;">Vážení rodiče, </span></p>
                     <p style="text-align: center;"><span style="font-size: x-large;">nově můžete na&nbsp;našich webových
                             stránkách </span></p>
-                    <p style="text-align: center;"><span style="font-size: x-large;">sledovat fotky jídel z&nbsp;naší školní
+                    <p style="text-align: center;"><span style="font-size: x-large;">sledovat fotky jídel z&nbsp;naší
+                            školní
                             jídelny.</span></p>
                     <p style="text-align: center;"></p>
-                    <p style="text-align: center;"><span style="color: #ff3366;"><span><span style="font-size: x-large;">Vše
+                    <p style="text-align: center;"><span style="color: #ff3366;"><span><span
+                                    style="font-size: x-large;">Vše
                                     najdete v&nbsp;sekci foto / školní jídelna</span></span></span></p>
                     <p style="text-align: center;"></p>
                     <p style="text-align: center;"><span style="font-size: x-large;">Vybrané recepty pak najdete
@@ -125,7 +136,7 @@
                     na Win 98 velmi často nainstalované nejsou.
                 </p>
             </article>
-            <article>
+            <article class="article">
                 <h1>Málo používaný způsob uvozování</h1>
                 <!--Třídou text-left zarovnáme text do centra-->
                 <div class="article text-center">
@@ -141,35 +152,33 @@
                         pro zaměňování (nejčastěji prostě jenom Edit> Replace).
 
                 </div>
-                <article>
-                    <h1>Vnořené uvozovky</h1>
-                    <!--Třídou text-left zarovnáme text do prava-->
-                    <div class="article text-right">Vysvětlím to takto: „V přímé řeči se může vyskytnout ‚citace‘. Pak
-                        se už
-                        nepoužívají dvojité
-                        uvozovky, ale jednoduché uvozovky.“ Jsou to prostě takové znaky ‚‘ , které bývají chybně
-                        zaměňovány
-                        za čárky a apostrofy.
+                <h1>Vnořené uvozovky</h1>
+                <!--Třídou text-left zarovnáme text do prava-->
+                <div class="article text-right">Vysvětlím to takto: „V přímé řeči se může vyskytnout ‚citace‘. Pak
+                    se už
+                    nepoužívají dvojité
+                    uvozovky, ale jednoduché uvozovky.“ Jsou to prostě takové znaky ‚‘ , které bývají chybně
+                    zaměňovány
+                    za čárky a apostrofy.
 
-                        Do HTML se spodní jednoduchá uvozovka vkládá jako čárka nebo jako entita &#8218;. Horní
-                        jednoduchá
-                        uvozovka klávesami Alt + 0145 (ve win) nebo entitou &#8216;.
-                        Podmínky funkčnosti
+                    Do HTML se spodní jednoduchá uvozovka vkládá jako čárka nebo jako entita &#8218;. Horní
+                    jednoduchá
+                    uvozovka klávesami Alt + 0145 (ve win) nebo entitou &#8216;.
+                    Podmínky funkčnosti
 
 
-                        Málo používaný způsob uvozování představují francouzské uvozovky. »Ohraničují citaci.« Do HTML
-                        se
-                        vkládají entitami &raquo; a &laquo;. Zřídka se mohou nahrazovat dvojicí menšítek a většítek >>
-                        , je to ale nepraktické a nehezké. V českých textech působí francouzské uvozovky netradičně,
-                        ale kolem důležitého citátu jsou velmi vhodné. Mimochodem když si pořádně prohlédnete tvar
-                        francouzských uvozovek, pochopíte, proč mají kulaté uvozovky tvar 99 a 66. Co používat Psát
-                        kulaté uvozovky při běžné práci pomocí altu nebo entitami je pakárna dobrá tak akorát na
-                        zblbnutí. Doporučuji raději používat rovné uvozovky, už proto, že si na ně čtenáři na
-                        internetu zvykli. Kulaté uvozovky používám jedině pokud: mám krátký text, na kterém mi
-                        enormně záleží, nebo mám dlouhý text, který se nebude nikdy měnit, takže se vyplatí prohnat
-                        to nějakým programem pro zaměňování (nejčastěji prostě jenom Edit> Replace).
-                    </div>
-                </article>
+                    Málo používaný způsob uvozování představují francouzské uvozovky. »Ohraničují citaci.« Do HTML
+                    se
+                    vkládají entitami &raquo; a &laquo;. Zřídka se mohou nahrazovat dvojicí menšítek a většítek >>
+                    , je to ale nepraktické a nehezké. V českých textech působí francouzské uvozovky netradičně,
+                    ale kolem důležitého citátu jsou velmi vhodné. Mimochodem když si pořádně prohlédnete tvar
+                    francouzských uvozovek, pochopíte, proč mají kulaté uvozovky tvar 99 a 66. Co používat Psát
+                    kulaté uvozovky při běžné práci pomocí altu nebo entitami je pakárna dobrá tak akorát na
+                    zblbnutí. Doporučuji raději používat rovné uvozovky, už proto, že si na ně čtenáři na
+                    internetu zvykli. Kulaté uvozovky používám jedině pokud: mám krátký text, na kterém mi
+                    enormně záleží, nebo mám dlouhý text, který se nebude nikdy měnit, takže se vyplatí prohnat
+                    to nějakým programem pro zaměňování (nejčastěji prostě jenom Edit> Replace).
+                </div>
                 <!--Třídou text-left zarovnáme text do obou stran-->
                 <!--Třídou font-bold vytvoříme odstavec s tučným fontem-->
                 <article class="article text-justify font-bold">
@@ -201,7 +210,6 @@
                         třeba
                         na Win 98 velmi často nainstalované nejsou.
                 </article>
-                <article>
                     <h1>Málo používaný způsob uvozování</h1>
                     <div class="article">
                         Málo používaný způsob uvozování představují francouzské uvozovky. »Ohraničují citaci.« Do HTML
@@ -217,7 +225,6 @@
                         to nějakým programem pro zaměňování (nejčastěji prostě jenom Edit> Replace).
 
                     </div>
-                    <article>
                         <h1>Vnořené uvozovky</h1>
 
                         <div class="article">Vysvětlím to takto: „V přímé řeči se může vyskytnout ‚citace‘. Pak se už
@@ -246,8 +253,6 @@
                             enormně záleží, nebo mám dlouhý text, který se nebude nikdy měnit, takže se vyplatí prohnat
                             to nějakým programem pro zaměňování (nejčastěji prostě jenom Edit> Replace).
                         </div>
-                    </article>
-                    <article>
                         <h1>Aktuality</h1>
                         <div class="article" id="aktuality">
                             <!-- Toto je místo pro smyčku pro náhled poslední galerie
@@ -277,54 +282,54 @@
                                 <p class="udalost">Hledáme paní učitelku</p>
                             </a>
                         </div>
-                    </article>
-                    <article class="banner-galerie">
-                        <h1>Nejnovější fotografie</h1>
-                        <div class="banner-fotografie">
-                            <div class="nazev-galerie">
-                                <!--Sem patří název nejnovější galerie
+                </article>
+                <article class="banner-galerie">
+                    <h1>Nejnovější fotografie</h1>
+                    <div class="banner-fotografie">
+                        <div class="nazev-galerie">
+                            <!--Sem patří název nejnovější galerie
                             <p>{$gallery_title}</p>
                             -->
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicingLorem ipsum dolor sit amet
-                                    consectetur
-                                    adipisicing</p>
-                            </div>
-                            <!-- Toto je místo pro smyčku pro náhled posledních fotografií galerie
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicingLorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing</p>
+                        </div>
+                        <!-- Toto je místo pro smyčku pro náhled posledních fotografií galerie
                             {foreach $categoryItems as $item}
                             <a href=" atd. {$item->gallery_img}</a>
                             {/foreach} -->
-                            <a href="https://ms37.plzen.eu/galerie/104137/foto/skolni-rok-2024-2025/hra-na-strasidla/">
-                                <img src="https://s3.eu-central-1.amazonaws.com/tf-prod-ms37/migration/PhotoGallery/104137/Images/3078332.jpg"
-                                    alt="Hra na strašidla" class="img-full lazy" loading="lazy">
-                            </a>
-                            <a
-                                href="https://ms37.plzen.eu/galerie/52830/foto/skolni-rok-2024-2025/maskot-bing-dwen-dwen/">
-                                <img src="https://s3.eu-central-1.amazonaws.com/tf-prod-ms37/migration/PhotoGallery/52830/Images/1583498.jpg"
-                                    alt="Maskot Bing Dwen Dwen" class="img-full lazy" loading="lazy">
-                            </a>
-                            <a
-                                href="https://ms37.plzen.eu/galerie/45694/foto/skolni-rok-2024-2025/slavnostni-rozlucka-s-panimi-ucitelkami/">
-                                <img src="https://s3.eu-central-1.amazonaws.com/tf-prod-ms37/migration/PhotoGallery/45694/Images/1416703.jpg"
-                                    alt="Slavnostní rozlučka s paními učitelkami" class="img-full lazy" loading="lazy">
-                            </a>
-                            <a
-                                href="https://ms37.plzen.eu/galerie/45498/foto/skolni-rok-2024-2025/cerven-2018-opakujeme-zari-kveten/">
-                                <img src="https://s3.eu-central-1.amazonaws.com/tf-prod-ms37/migration/PhotoGallery/45498/Images/1412202.jpg"
-                                    alt="ČERVEN 2018 &quot;opakujeme září - květen&quot;" class="img-full lazy"
-                                    loading="lazy">
-                            </a>
-                        </div>
-                        <!-- konec náhledu poslední galerie -->
-                    </article>
-                    <!--zde končí měnící se obsah stránky a začíná neměnný obsah-->
+                        <a href="https://ms37.plzen.eu/galerie/104137/foto/skolni-rok-2024-2025/hra-na-strasidla/">
+                            <img src="https://s3.eu-central-1.amazonaws.com/tf-prod-ms37/migration/PhotoGallery/104137/Images/3078332.jpg"
+                                alt="Hra na strašidla" class="img-full lazy" loading="lazy">
+                        </a>
+                        <a href="https://ms37.plzen.eu/galerie/52830/foto/skolni-rok-2024-2025/maskot-bing-dwen-dwen/">
+                            <img src="https://s3.eu-central-1.amazonaws.com/tf-prod-ms37/migration/PhotoGallery/52830/Images/1583498.jpg"
+                                alt="Maskot Bing Dwen Dwen" class="img-full lazy" loading="lazy">
+                        </a>
+                        <a
+                            href="https://ms37.plzen.eu/galerie/45694/foto/skolni-rok-2024-2025/slavnostni-rozlucka-s-panimi-ucitelkami/">
+                            <img src="https://s3.eu-central-1.amazonaws.com/tf-prod-ms37/migration/PhotoGallery/45694/Images/1416703.jpg"
+                                alt="Slavnostní rozlučka s paními učitelkami" class="img-full lazy" loading="lazy">
+                        </a>
+                        <a
+                            href="https://ms37.plzen.eu/galerie/45498/foto/skolni-rok-2024-2025/cerven-2018-opakujeme-zari-kveten/">
+                            <img src="https://s3.eu-central-1.amazonaws.com/tf-prod-ms37/migration/PhotoGallery/45498/Images/1412202.jpg"
+                                alt="ČERVEN 2018 &quot;opakujeme září - květen&quot;" class="img-full lazy"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- konec náhledu poslední galerie -->
+                </article>
 
-                    <!--zde je vložený odkaz na jquery, kterým zatím řeším kliknutí na část obrázku, 
+                <!--zde končí měnící se obsah stránky a začíná neměnný obsah-->
+
+                <!--zde je vložený odkaz na jquery, kterým zatím řeším kliknutí na část obrázku, 
                     který přesměruje uživatele na dannou třídu školky.
 
                     Vložený spodní obrázek barvinek-spodni_baner-zima
                     -->
-                            <img src="" alt="spodni-banner" class="spodni-banner imgclick">
-                    <script src="./assets/js/image-click.js"></script>
+                <img src="" alt="spodni-banner" class="spodni-banner imgclick">
+                <script src="./assets/js/image-click.js"></script>
         </main>
 
         <!--zde začíná spodní lišta stránky-->
@@ -341,31 +346,32 @@
 <script src="assets/js/hover-lista.js"></script>
 <script>
     function includeHTML() {
-      var z, i, elmnt, file, xhttp;
-      /* Loop through a collection of all HTML elements: */
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("w3-include-html");
-        if (file) {
-          /* Make an HTTP request using the attribute value as the file name: */
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-              /* Remove the attribute, and call this function once more: */
-              elmnt.removeAttribute("w3-include-html");
-              includeHTML();
+        var z, i, elmnt, file, xhttp;
+        /* Loop through a collection of all HTML elements: */
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /* Make an HTTP request using the attribute value as the file name: */
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        /* Remove the attribute, and call this function once more: */
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /* Exit the function: */
+                return;
             }
-          }
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          /* Exit the function: */
-          return;
         }
-      }
     }
-    </script> 
+</script>
+
 </html>

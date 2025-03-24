@@ -27,7 +27,7 @@ function myFunction(x) {
   }
   
   // Create a MediaQueryList object
-  var x = window.matchMedia("(min-width: 897px)")
+  var x = window.matchMedia("(min-width: 1155px)")
   
   // Call listener function at run time
   myFunction(x);

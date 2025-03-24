@@ -839,7 +839,6 @@ article[class*="article"] {
             }
 
             .menu {
-
                 all: unset;
                 @include menu-font-2();
                 display: flex;
@@ -889,9 +888,7 @@ article[class*="article"] {
                 li {
                     float: left;
                     overflow: hidden;
-                    .active {
-                        background-color: $nadpisy-back-leh;
-                    }
+
                     a {
                         cursor: pointer;
                         border: $nadpisy-back-leh 1px solid;
